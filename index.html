@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/7d6ec1fd48.js" crossorigin="anonymous"></script>
+    <title>Alquiler Quinta</title>
+</head>
+<body>
+    <div class="header">
+        <img src="quinta2.1.jpeg" class="background-image">
+        <div class="content">
+            <img src="logo-pag (blanco).png" class="logo-titulo">
+            <h1 class="titulo-h1">MULTIESPACIO SOCIAL</h1>
+        </div>
+    </div>
+<!-- SERVICIOS -->
+<div class="separador"></div>
+    <div>
+        <h2 class="titulos">Servicios que ofrecemos:</h2>
+        <div class="caracteristicas">
+            <div class="sub-caracteristicas"><i class="fa-solid fa-house" style="color: #000000;"></i> Salon</div>
+            <div class="sub-caracteristicas"><i class="fa-solid fa-beer-mug-empty" style="color: #000000;"></i> Patio cervecero</div>
+            <div class="sub-caracteristicas"><i class="fa-solid fa-person-swimming" style="color: #000000;"></i> Pileta</div>
+            <div class="sub-caracteristicas"><i class="fa-solid fa-restroom" style="color: #000000;"></i> Sanitarios</div>
+            <div class="sub-caracteristicas"><i class="fa-solid fa-tree" style="color: #000000;"></i> Parque de juegos</div>
+            <div class="sub-caracteristicas"><i class="fa-solid fa-snowflake" style="color: #000000;"></i> Aire acondicionado</div>
+            <div class="sub-caracteristicas"><i class="fa-solid fa-fire-burner" style="color: #000000;"></i> Parrilla</div>
+            <div class="sub-caracteristicas"><i class="fa-solid fa-gamepad" style="color: #000000;"></i> Juegos</div>
+            <div class="sub-caracteristicas"><i class="fa-solid fa-wifi" style="color: #000000;"></i></i>Wifi</div>
+            <div class="sub-caracteristicas"><i class="fa-solid fa-bed" style="color: #000000;"></i> Dormitorios</div>
+        </div>
+    </div>
+<!-- FOTOS -->
+<div class="separador"></div>
+<div>
+    <h2 class="titulos">Fotos del espacio:</h2>
+    <div class="fotos-container">
+        <div class="fotos" id="contenedorFotos">
+            <img src="foto1.jpg" class="fotos-espacio" onclick="abrirModal('foto1.jpg')">
+            <img src="foto2.jpg" class="fotos-espacio" onclick="abrirModal('foto2.jpg')">
+            <img src="foto3.jpg" class="fotos-espacio" onclick="abrirModal('foto3.jpg')">
+            <img src="foto4.jpg" class="fotos-espacio" onclick="abrirModal('foto4.jpg')">
+            <img src="foto5.jpg" class="fotos-espacio" onclick="abrirModal('foto5.jpg')">
+            <img src="foto6.jpeg" class="fotos-espacio" onclick="abrirModal('foto6.jpeg')">
+            <img src="foto7.jpeg" class="fotos-espacio" onclick="abrirModal('foto7.jpeg')">
+            <img src="foto8.jpg" class="fotos-espacio" onclick="abrirModal('foto8.jpg')">
+            <img src="foto9.jpg" class="fotos-espacio" onclick="abrirModal('foto9.jpg')">
+            <img src="foto10.jpg" class="fotos-espacio" onclick="abrirModal('foto10.jpg')">
+            <img src="foto11.jpg" class="fotos-espacio" onclick="abrirModal('foto11.jpg')">
+            <img src="foto12.jpg" class="fotos-espacio" onclick="abrirModal('foto12.jpg')">
+        </div>
+        <div class="indicador" id="indicadorDeslizar">1/7</div>
+    </div>
+</div>
+
+<!-- Modal de Imagen -->
+<div id="modalImagen" class="modal">
+    <span class="cerrar-modal" onclick="cerrarModal()">&times;</span>
+    <div class="flecha-izquierda" onclick="mostrarImagenAnterior()">&#10094;</div>
+    <img class="modal-contenido" id="imagenModal">
+    <div class="flecha-derecha" onclick="mostrarSiguienteImagen()">&#10095;</div>
+    <div class="indicador" id="indicadorDeslizarModal"></div>
+</div>
+<!-- SOBRE EL ALOJAMIENTO -->
+<div class="separador"></div>
+    <div class="opciones">
+        <h2 class="titulos" id="op-titulo">Sobre el alojamiento:</h2>
+        <p class="descripcion">
+            <b>SALON</b>: 100m2 cerrado + Aire Acondicionado + TV + Ventilador industrial + Internet WiFi + Mesa, Sillas + 2 baños + 1 con ducha. <br>
+            <b>PARQUE</b>: Parrilla + Fogonero + Pileta de 8x4 profundidad 1.00 a 2.00 mts2 baños + ducha interior y exterior + Patio Cervecero con sillas y mesas tipo carretes + reposeras + Solarium en deck de madera + Juego infantil con mangrullo hamacas, ruedo colgante y tobogan para menores de 10 años. <br>
+            <B>COCINA</B>: Heladera/Freezer + Horno pastelero pizzero + Pava eléctrica + Dos discos arado grande + Anafe eléctrico + vajilla bàsica. <br>
+            <B>JUEGOS</B>: Ping pong + Sapo + Red de Vóley + pelota paleta + tejo de playa + juego de Ñinos. <br>
+            <b>HABITACION</b>: matrimonial + tres camas individuales + ventilador.
+        </p>
+    </div>
+<!-- MAPA -->
+<div class="separador"></div>
+    <div>
+        <h2 class="titulos">Ubicación</h2>
+            <div class="link-mapa">
+                <p class="subtitulo"><i class="fa-solid fa-location-dot" style="color: #0d0d0d;"></i> Buenos Aires / Berazategui</p>
+                <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d913.1336671846284!2d-58.17994518504592!3d-34.83845798750417!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2d807c0b322e5%3A0x617127a8cc31100a!2sFundaci%C3%B3n%20para%20la%20Luther%C3%ADa%20Social!5e0!3m2!1ses!2sar!4v1699476179756!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            </div>
+    </div>
+<!-- SOBRE EL MULTIESPACIO  -->
+<div class="separador"></div>
+    <div>
+        <h2 class="titulos" id="op-titulo">Sobre el multiespacio:</h2>
+            <div class="Condiciones">
+                <h4 class="-titulo2">Condicion de Pago</h4>
+                    <li class="list-forma"> <i class="fa-solid fa-coins" style="color: #44B9CA;"></i> El saldo debe ser realizado en su totalidad al momento de la reserva</li>
+
+                <h4 class="-titulo2">Formas de Pago</h4>
+                    <li class="list-forma"><i class="fa-solid fa-money-bills" style="color: #44B9CA;"></i> Efectivo</li>
+                    <li class="list-forma"><i class="fa-solid fa-building-columns" style="color: #44B9CA;"></i> Transferencia</li>
+             
+                <h4 class="-titulo2">Horario:</h4>
+                    <li class="list-forma"><i class="fa-solid fa-arrow-right-to-bracket" style="color: #44B9CA;"></i> Pasar el dia de 10 a 20hs</li>
+                    <li class="list-forma"><i class="fa-solid fa-arrow-right-to-bracket" style="color: #44B9CA;"></i> Noche de 20hs a 5hs</li>
+                    <li class="list-forma"><i class="fa-solid fa-arrow-right-to-bracket" style="color: #44B9CA;"></i> Trasnochar de 11 a 10hs</li>
+                    <li class="list-forma"><i class="fa-solid fa-arrow-right-to-bracket" style="color: #44B9CA;"></i> Consulte por otros horarios</li>
+                
+                <h4 class="-titulo2">Precios:</h4>
+                <li class="list-forma"><i class="fa-solid fa-tag" style="color: #44B9CA;"></i> Día Amigos: HASTA 20 PERSONAS 〰️ $80.000</li>
+                <li class="list-forma"><i class="fa-solid fa-tag" style="color: #44B9CA;"></i> Día Amigos: HASTA 30 PERSONAS 〰️ $120.000</li>
+                <li class="list-forma"><i class="fa-solid fa-tag" style="color: #44B9CA;"></i> Noche Amigos: HASTA 30 PERSONAS 〰️ $135.000</li>
+                <li class="list-forma"><i class="fa-solid fa-tag" style="color: #44B9CA;"></i> Noche Amigos: HASTA 40 PERSONAS 〰️ $180.000</li>
+                <li class="list-forma"><i class="fa-solid fa-tag" style="color: #44B9CA;"></i> Trasnoche familiar: HASTA 4 PERSONAS 〰️ $60.000</li>
+                <li class="list-forma"><i class="fa-solid fa-tags" style="color:#44B9CA;"></i> Adicional persona diurna 〰️ $4.500</li>
+                <li class="list-forma"><i class="fa-solid fa-tags" style="color:#44B9CA;"></i> Adicional persona nocturna 〰️ $5.000</li>        
+             
+                <h4 class="-titulo2">Adicionales:</h4>
+                <li class="list-forma"><i class="fa-solid fa-tag" style="color: #44B9CA;"></i> Escenario + sonido en vivo + Luces colores 〰️ $26.000</li>
+                <li class="list-forma"><i class="fa-solid fa-tag" style="color: #44B9CA;"></i> Proyector pantalla 〰️ $6.800</li>
+                <li class="list-forma"><i class="fa-solid fa-tag" style="color: #44B9CA;"></i> Màquina de humo 〰️ $6.800</li>
+                <li class="list-forma"><i class="fa-solid fa-tag" style="color: #44B9CA;"></i> Sonido con Bluetooth 〰️ $3.800</li>
+                <li class="list-forma"><i class="fa-solid fa-tag" style="color: #44B9CA;"></i> Mozos/camareras c/uS 〰️ 7.000</li>
+                <li class="list-forma"><i class="fa-solid fa-tags" style="color:#44B9CA;"></i> Adicional hora diurna 〰️ %10</li>
+                <li class="list-forma"><i class="fa-solid fa-tags" style="color:#44B9CA;"></i> Adicional hora nocturna 〰️ %15</li>        
+        </div>
+        
+    </div>          
+<!-- DESCARGAS -->
+    <div class="dercargas">
+        <h4 class="-titulo2">Archivos para descargar:</h4>
+        <li class="text-descarga"><a class="text-descarga" id="a-descargas" download="Contratro Alquiler" href="CONTRATO DE LOCACION SALON DE EVENTOS.pdf">Modelo Contratro Alquiler</a></li>
+    </div>
+<!-- FOOTER     -->
+    <footer class="container">
+        <p href="" class="container-1"><i class="fa-solid fa-user"  style="color: #ffffff;"></i> MULTIESPACIO SOCIAL</p>
+        <p class="container-2">Fundacion para la lutheria social</p>
+    
+        <p href="" class="container-1"><i class="fa-brands fa-whatsapp" style="color: #ffffff;"></i></i> Whatsapp</p>
+        <p class="container-2">1124007293</p>
+        
+        <p href="" class="container-1"><i class="fa-solid fa-location-dot" style="color: #ffffff;"></i> Direccion</p>
+        <p class="container-2">Buenos Aires - Argentina</p>
+      </footer>
+
+
+      <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XT6KNPHKNT"></script>
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XT6KNPHKNT');
+
+
+// FOTOS
+window.addEventListener('DOMContentLoaded', function () {
+    const contenedorFotos = document.getElementById('contenedorFotos');
+    const fotos = contenedorFotos.querySelectorAll('.fotos-espacio');
+    const indicadorDeslizar = document.getElementById('indicadorDeslizar');
+
+    const actualizarIndicador = () => {
+        const cantidadFotos = fotos.length;
+        const anchoImagen = contenedorFotos.clientWidth / cantidadFotos;
+        const fotoActual = Math.round(contenedorFotos.scrollLeft / anchoImagen) + 1;
+
+        // Asegurarse de que el número de la foto actual esté en el rango adecuado
+        const fotoVisible = fotoActual > cantidadFotos ? cantidadFotos : fotoActual;
+
+        indicadorDeslizar.textContent = fotoVisible + '/' + cantidadFotos;
+    };
+
+    // Actualizar el indicador al cargar la página
+    actualizarIndicador();
+
+    contenedorFotos.addEventListener('scroll', function () {
+        actualizarIndicador();
+    });
+
+    // Funciones para abrir y cerrar el modal
+    window.abrirModal = function (imagenSrc) {
+        const modal = document.getElementById('modalImagen');
+        const imagenModal = document.getElementById('imagenModal');
+        const fotos = contenedorFotos.querySelectorAll('.fotos-espacio');
+
+        // Configurar la imagen en el modal
+        imagenModal.src = imagenSrc;
+
+        // Mostrar el modal
+        modal.style.display = 'block';
+
+        // Actualizar el indicador en el modal
+        const fotoActual = Array.from(fotos).findIndex(img => img.src === imagenSrc) + 1;
+        const cantidadFotos = fotos.length;
+        document.getElementById('indicadorDeslizarModal').textContent = fotoActual + '/' + cantidadFotos;
+
+        // Agregar eventos de deslizamiento en el modal
+        modal.addEventListener('touchstart', handleTouchStart, false);
+        modal.addEventListener('touchmove', handleTouchMove, false);
+    };
+
+    window.cerrarModal = function () {
+        const modal = document.getElementById('modalImagen');
+        modal.style.display = 'none';
+
+        // Limpiar eventos de deslizamiento en el modal
+        modal.removeEventListener('touchstart', handleTouchStart, false);
+        modal.removeEventListener('touchmove', handleTouchMove, false);
+    };
+
+    // Funciones para deslizar imágenes en el modal
+    function handleTouchStart(evt) {
+        xDown = evt.touches[0].clientX;
+    }
+
+    function handleTouchMove(evt) {
+        if (!xDown) {
+            return;
+        }
+
+        let xUp = evt.touches[0].clientX;
+        let xDiff = xDown - xUp;
+
+        if (xDiff > 0) {
+            // Deslizar a la izquierda
+            mostrarSiguienteImagen();
+        } else {
+            // Deslizar a la derecha
+            mostrarImagenAnterior();
+        }
+
+        /* Reiniciar la posición inicial para el próximo deslizamiento */
+        xDown = null;
+    }
+
+    function mostrarSiguienteImagen() {
+        const fotos = contenedorFotos.querySelectorAll('.fotos-espacio');
+        const imagenModal = document.getElementById('imagenModal');
+
+        const fotoActual = Array.from(fotos).findIndex(img => img.src === imagenModal.src);
+        const siguienteFoto = fotos[fotoActual + 1];
+
+        if (siguienteFoto) {
+            imagenModal.src = siguienteFoto.src;
+
+            // Actualizar el indicador en el modal
+            const cantidadFotos = fotos.length;
+            const fotoSiguiente = fotoActual + 2;
+            document.getElementById('indicadorDeslizarModal').textContent = fotoSiguiente + '/' + cantidadFotos;
+        }
+    }
+
+    function mostrarImagenAnterior() {
+        const fotos = contenedorFotos.querySelectorAll('.fotos-espacio');
+        const imagenModal = document.getElementById('imagenModal');
+
+        const fotoActual = Array.from(fotos).findIndex(img => img.src === imagenModal.src);
+        const fotoAnterior = fotos[fotoActual - 1];
+
+        if (fotoAnterior) {
+            imagenModal.src = fotoAnterior.src;
+
+            // Actualizar el indicador en el modal
+            const cantidadFotos = fotos.length;
+            const fotoAnteriorNumero = fotoActual;
+            document.getElementById('indicadorDeslizarModal').textContent = fotoAnteriorNumero + '/' + cantidadFotos;
+        }
+    }
+});
+// ...
+
+window.mostrarSiguienteImagen = function () {
+    const contenedorFotos = document.getElementById('contenedorFotos');
+    const fotos = contenedorFotos.querySelectorAll('.fotos-espacio');
+    const imagenModal = document.getElementById('imagenModal');
+
+    const fotoActual = Array.from(fotos).findIndex(img => img.src === imagenModal.src);
+    const siguienteFoto = fotos[fotoActual + 1];
+
+    if (siguienteFoto) {
+        imagenModal.src = siguienteFoto.src;
+
+        // Actualizar el indicador en el modal
+        const cantidadFotos = fotos.length;
+        const fotoSiguiente = fotoActual + 2;
+        document.getElementById('indicadorDeslizarModal').textContent = fotoSiguiente + '/' + cantidadFotos;
+    }
+};
+
+window.mostrarImagenAnterior = function () {
+    const contenedorFotos = document.getElementById('contenedorFotos');
+    const fotos = contenedorFotos.querySelectorAll('.fotos-espacio');
+    const imagenModal = document.getElementById('imagenModal');
+
+    const fotoActual = Array.from(fotos).findIndex(img => img.src === imagenModal.src);
+    const fotoAnterior = fotos[fotoActual - 1];
+
+    if (fotoAnterior) {
+        imagenModal.src = fotoAnterior.src;
+
+        // Actualizar el indicador en el modal
+        const cantidadFotos = fotos.length;
+        const fotoAnteriorNumero = fotoActual;
+        document.getElementById('indicadorDeslizarModal').textContent = fotoAnteriorNumero + '/' + cantidadFotos;
+    }
+};
+// ...
+
+window.abrirModal = function (imagenSrc) {
+    const modal = document.getElementById('modalImagen');
+    const imagenModal = document.getElementById('imagenModal');
+    const fotos = contenedorFotos.querySelectorAll('.fotos-espacio');
+
+    // Configurar la imagen en el modal
+    imagenModal.src = imagenSrc;
+
+    // Mostrar el modal
+    modal.style.display = 'flex';  // Cambiar a flex para centrar vertical y horizontalmente
+
+    // Actualizar el indicador en el modal
+    const fotoActual = Array.from(fotos).findIndex(img => img.src === imagenSrc) + 1;
+    const cantidadFotos = fotos.length;
+    document.getElementById('indicadorDeslizarModal').textContent = fotoActual + '/' + cantidadFotos;
+
+    // Agregar eventos de deslizamiento en el modal
+    modal.addEventListener('touchstart', handleTouchStart, false);
+    modal.addEventListener('touchmove', handleTouchMove, false);
+};
+</script>
+</body>
+</html>
