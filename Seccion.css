@@ -1,0 +1,31 @@
+
+    section{
+        width: auto; 
+        max-width: 1200px; 
+        margin-left: auto; 
+        margin-right: auto; 
+      }
+    
+      @media (max-width: 1250px){
+        section{
+            max-width: 1000px; 
+        }
+      }
+       @media (max-width: 430px){
+        section{
+          max-width: 410px;
+        } 
+        nav {
+          display: flex;
+          margin: auto;
+          flex-wrap:wrap;
+        }
+        .nave-1{
+          display: inline;
+          padding: 8px;
+        }
+       } 
+
+
+
+

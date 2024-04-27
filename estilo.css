@@ -1,0 +1,214 @@
+/* Generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(242, 242, 242);
+  }
+  ul{
+    list-style: none;
+  }
+  li{
+    list-style: none;
+  }
+.titulo{
+    text-align: center;
+    margin: 2rem;
+    font-size: 2rem;
+}
+.sub-titulos{
+    border-bottom:  1px solid gray;
+    font-size: 1.5rem; 
+    margin: 1rem 2rem 1.4rem 1.2rem;
+}
+
+/* Sobre el alojamiento */
+.alojamiento{
+    margin: 20px;
+}
+.descripcion{
+    font-size: 1rem;
+}
+/* FOTOS */
+.fotos {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    position: relative;
+}
+.fotos-espacio {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    max-width: 100% !important; 
+    max-height: 40vh;
+    object-fit: cover;
+}
+/* Servicios */
+.caracteristicas {
+    margin: 0 auto; /* Esto centra el contenedor */
+    max-width: 900px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around; /* Ajusta el espacio alrededor de las columnas */
+}
+.sub-caracteristicas {
+    width: calc(33.33% - 20px); /* Establece el ancho de cada columna */
+    margin: 6px; /* Espacio entre las columnas */
+    color: #333;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+li{
+    margin-bottom: .9rem;
+}
+/* Mapa */
+.link-mapa{
+    text-align: center;
+    margin: 10px;
+}
+.mapa{
+    width: 100%;
+    height: 30vh;
+}
+/* Normas alojamiento */
+.normas-alojamiento{
+    margin: 0 auto; /* Esto centra el contenedor */
+    max-width: 900px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around
+}
+.normas{
+    margin: .5rem;
+    width: 300px;
+}
+h5{
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.condicones{
+    margin-left: 20px;
+    font-size: 1rem;
+}
+/* Calculadora */
+
+.calculadora {
+    outline: 2px solid red;
+    width: 900px;
+    height: 300px;
+    text-align: center;
+    margin: 0 auto;
+}
+#tipo-alquiler{
+    display: block;
+    text-align: center;
+
+}
+input , label , select{
+    text-align: center;
+    margin: 0 auto;
+
+}
+/* prueba */
+.input-container {
+    position: relative;
+    margin-bottom: 20px;
+    width: 200px;
+    height: 20px;
+  }
+  input{
+    height: 20px;
+
+  }
+  .input-container label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(5px, -50%);
+    padding: 0 5px;
+    font-size: 14px;
+  }
+  
+  .input-container input {
+    width: 100%;
+    padding: 8px;
+    font-size: 16px;
+  }
+  
+/* prueba */
+
+/* Descargas */
+.descargas {
+    background-color: #f4f4f4;
+    margin-top: 20px;
+}
+
+.sub-titulos {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.lista-descargas {
+    list-style: none;
+    padding: 0;
+}
+
+.lista-descargas li {
+    margin-bottom: 10px;
+}
+
+.lista-descargas li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    display: block;
+}
+
+.lista-descargas li a:hover {
+    color: #007bff;
+}
+.archivos-des{
+    margin-left: 20px;
+}
+
+/* FOOTER */
+footer {
+    background-color: #333;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer * {
+    background-color: #333;
+    color: #fff; 
+}
+
+.contenido-footer {
+    display: flex;
+    justify-content: space-around;
+}
+
+.enlaces-rapidos, .informacion-contacto {
+    flex: 1;
+}
+
+.enlaces-rapidos ul {
+    list-style: none;
+    padding: 0;
+}
+
+.enlaces-rapidos ul li {
+    margin-bottom: 5px;
+}
+
+.derechos-reservados {
+    margin-top: 20px;
+}
