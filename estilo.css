@@ -5,10 +5,8 @@
     box-sizing: border-box;
     background-color: rgb(242, 242, 242);
   }
-  ul{
-    list-style: none;
-  }
-  li{
+  li, ul, a{
+    text-decoration: none;
     list-style: none;
   }
 .titulo{
