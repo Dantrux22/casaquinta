@@ -9,11 +9,7 @@
     text-decoration: none;
     list-style: none;
   }
-.titulo{
-    text-align: center;
-    margin: 2rem;
-    font-size: 2rem;
-}
+
 .sub-titulos{
     border-bottom:  1px solid gray;
     font-size: 1.5rem; 
@@ -45,15 +41,15 @@
 }
 /* Servicios */
 .caracteristicas {
-    margin: 0 auto; /* Esto centra el contenedor */
+    margin: 0 auto; 
     max-width: 900px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around; /* Ajusta el espacio alrededor de las columnas */
+    justify-content: space-around;
 }
 .sub-caracteristicas {
-    width: calc(33.33% - 20px); /* Establece el ancho de cada columna */
-    margin: 6px; /* Espacio entre las columnas */
+    width: calc(33.33% - 20px);
+    margin: 10px; 
     color: #333;
     font-size: 1rem;
     display: flex;
@@ -76,8 +72,9 @@ li{
     height: 30vh;
 }
 /* Normas alojamiento */
+
 .normas-alojamiento{
-    margin: 0 auto; /* Esto centra el contenedor */
+    margin: 0 auto;
     max-width: 900px;
     display: flex;
     flex-wrap: wrap;
