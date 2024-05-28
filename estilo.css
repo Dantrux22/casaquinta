@@ -93,52 +93,6 @@ h5{
     margin-left: 20px;
     font-size: 1rem;
 }
-/* Calculadora */
-
-.calculadora {
-    outline: 2px solid red;
-    width: 900px;
-    height: 300px;
-    text-align: center;
-    margin: 0 auto;
-}
-#tipo-alquiler{
-    display: block;
-    text-align: center;
-
-}
-input , label , select{
-    text-align: center;
-    margin: 0 auto;
-
-}
-/* prueba */
-.input-container {
-    position: relative;
-    margin-bottom: 20px;
-    width: 200px;
-    height: 20px;
-  }
-  input{
-    height: 20px;
-
-  }
-  .input-container label {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translate(5px, -50%);
-    padding: 0 5px;
-    font-size: 14px;
-  }
-  
-  .input-container input {
-    width: 100%;
-    padding: 8px;
-    font-size: 16px;
-  }
-  
-/* prueba */
 
 /* Descargas */
 .descargas {

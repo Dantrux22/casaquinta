@@ -32,6 +32,7 @@
     border: 2px solid #ccc;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    
 }
 
 /* Checkbox (when selected) */
@@ -47,12 +48,14 @@
 
 /* Recuadro de horario */
 .horario {
+    width: 100%;
     margin: 10px;
     border: 2px solid #ccc;
     border-radius: 8px; 
     padding: 10px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+
 }
 
 .calculadora input[type="number"],
@@ -70,4 +73,16 @@
     color: #ff0000;
     font-size: 14px;
     margin-top: 5px;
+}
+@media (max-width: 768px) {
+    .conten-horario{
+        padding: 0;
+        margin: 20px 0;
+        width: 100%;
+
+
+    }
+    .horario {
+        margin: 5px;
+    }
 }

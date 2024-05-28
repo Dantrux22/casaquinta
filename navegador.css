@@ -1,22 +1,100 @@
- /* Navegacion */
-
- .navegador{
-    display: flex; 
-    flex-direction: column;
-    margin: 0 auto;
- }
- .titulo{
-    text-align: center;
-    font-size: 2.5rem;
-    margin: 25px 0;
- }
- .nave {
-    display: flex; 
-    justify-content: space-evenly; 
-    margin-bottom: 30px;
+/* General styles */
+body {
+   font-family: Arial, sans-serif;
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
 }
+
+.navegador {
+   display: flex;
+   flex-direction: column;
+   margin: 0 auto;
+   align-items: center;
+   width: 100%;
+}
+
+.header-content {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   position: relative;
+}
+
+.titulo {
+   text-align: center;
+   font-size: 2.5rem;
+   margin: 25px 0;
+   flex: 1;
+}
+
+.menu-toggle {
+   display: none;
+   font-size: 2rem;
+   background: none;
+   border: none;
+   cursor: pointer;
+   position: absolute;
+   right: 20px;
+}
+
+/* Navigation styles */
+.nave {
+   display: flex;
+   justify-content: space-evenly;
+   margin-bottom: 30px;
+}
+
 .nave-1 {
-    color: #000;
-    font-size: 1rem; 
-    margin: 0 1rem; 
-} 
+   color: #000;
+   font-size: 1rem;
+   margin: 0 1rem;
+   text-decoration: none;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+   .titulo{
+      text-align: start;
+      font-size: 1.6rem;
+      margin: 20px 20px;
+      background-color: #b5b5b5;
+   }
+   .nave {
+       display: none;
+       flex-direction: column;
+       width: 100%;
+       text-align: center;
+       position: fixed;
+       top: 0;
+       left: 0;
+       height: 100vh;
+       justify-content: center;
+       align-items: center;
+       z-index: 1;
+       padding-top: 60px; 
+   }
+
+   .menu-toggle {
+       display: block;
+   }
+
+   .nave-1 {
+       margin: 20px 0; /* Increased margin for more space between options */
+       font-size: 1.5rem;
+   }
+
+   .nave.show {
+       display: flex;
+   }
+
+   .header-content {
+       position: fixed;
+       top: -2px;
+       width: 100%;
+       z-index: 2;
+       border-radius: 0 0 7px 7px;
+       background-color: #b5b5b5;
+   }
+}
