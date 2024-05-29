@@ -55,6 +55,9 @@ body {
 
 /* Responsive styles */
 @media (max-width: 768px) {
+   section{
+      margin-top: 67px;
+   }
    .titulo{
       text-align: start;
       font-size: 1.6rem;
