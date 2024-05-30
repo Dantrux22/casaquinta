@@ -4,7 +4,14 @@
     padding: 0;
     box-sizing: border-box;
     background-color: rgb(242, 242, 242);
+    
   }
+  html {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+}
   li, ul, a{
     text-decoration: none;
     list-style: none;

@@ -5,6 +5,12 @@ body {
    padding: 0;
    box-sizing: border-box;
 }
+html {
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover; 
+}
 
 .navegador {
    display: flex;
@@ -38,6 +44,7 @@ body {
    position: absolute;
    right: 20px;
 }
+
 
 /* Navigation styles */
 .nave {
