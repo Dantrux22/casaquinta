@@ -81,15 +81,19 @@ body {
 
    .menu-toggle {
        display: block;
+       background-color: #b5b5b5;
    }
 
    .nave-1 {
-       margin: 20px 0; /* Increased margin for more space between options */
+       margin: 20px 0; 
        font-size: 1.5rem;
+       background-color: #fff;
+
    }
 
    .nave.show {
        display: flex;
+       background-color: #fff;
    }
 
    .header-content {
