@@ -71,7 +71,6 @@ html {
       text-align: start;
       font-size: 1.6rem;
       margin: 20px 20px;
-      background-color: #b5b5b5;
    }
    .nave {
        display: none;
@@ -90,7 +89,6 @@ html {
 
    .menu-toggle {
        display: block;
-       background-color: #b5b5b5;
    }
 
    .nave-1 {
@@ -111,6 +109,5 @@ html {
        width: 100%;
        z-index: 2;
        border-radius: 0 0 7px 7px;
-       background-color: #b5b5b5;
    }
 }
