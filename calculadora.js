@@ -72,3 +72,15 @@ document.getElementById("horario-dia-2").addEventListener("change", calcularTota
 document.getElementById("cantidad-personas-hospedaje").addEventListener("input", calcularTotal);
 document.getElementById("cantidad-dias").addEventListener("input", calcularTotal);
 
+
+    function seleccionarUnico(checkbox) {
+        // Obtener todos los checkboxes con el mismo nombre
+        const checkboxes = document.getElementsByName("horario-dia");
+
+        // Desmarcar todos los checkboxes excepto el que se acaba de seleccionar
+        checkboxes.forEach((cb) => {
+            if (cb !== checkbox) {
+                cb.checked = false;
+            }
+        });
+    }

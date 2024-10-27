@@ -31,10 +31,10 @@ html {
 /* Checkbox */
 .calculadora input[type="checkbox"] {
     position: relative;
-    top: 4px;
     appearance: none; /* Hide default checkbox style */
     width: 20px;
     height: 20px;
+    margin: 0 10px 0 0;
     border-radius: 50%; /* Create a circle for the checkbox */
     border: 2px solid #ccc;
     cursor: pointer;
@@ -47,23 +47,25 @@ html {
     background-color: #333; 
 }
 
-.conten-horario {
-    margin-top: 20px;
+.conten-horario{
+    display: flex;
     border-radius: 8px;
-    padding: 10px;
 }
 
 /* Recuadro de horario */
-.horario {
-    width: 100%;
-    margin: 10px;
-    border: 2px solid #ccc;
-    border-radius: 8px; 
-    padding: 10px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+    .horario {
+        display: flex;
+        max-width: 500px;
+        margin: 20px auto;
+        padding: 10px;
+        text-align: center; /* Cambiar a "center" */
+        justify-content: center;
+        border: 2px solid #ccc;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
 
-}
 
 .calculadora input[type="number"],
 .calculadora input[type="text"] {
@@ -86,10 +88,5 @@ html {
         padding: 0;
         margin: 20px 0;
         width: 100%;
-
-
-    }
-    .horario {
-        margin: 5px;
     }
 }
