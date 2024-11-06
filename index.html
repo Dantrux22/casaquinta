@@ -155,9 +155,8 @@
         <label class="horario">
             <input type="checkbox" id="horario-dia-2" name="horario-dia" onclick="seleccionarUnico(this)"> 21hs a 6am
         </label>
-        <label><input type="tel" id="cantidad-personas-dia" min="20" max="80" placeholder="Cantidad de personas..." style="width: 200px;"></label> <br>
-        <span id="mensaje-personas-dia" class="mensaje-error">Debe ser entre 20 y 80 personas</span>
-    </div>
+        <label><input type="tel" id="cantidad-personas-dia" min="20" max="80" placeholder="Cantidad de personas..." style="width: 200px;" pattern="[0-9]*"></label> <br>
+        <span id="mensaje-personas-dia" class="mensaje-error">Debe ser entre 20 y 80 personas</span>    </div>
 
     <!-- <div id="horario-hospedaje" style="display: none;">  -->
         <!-- <label><input type="number" id="cantidad-dias" min="2" max="15" placeholder="Cantidad de Días..." style="width: 200px;"></label> -->
