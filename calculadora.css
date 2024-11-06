@@ -4,6 +4,7 @@ html {
     -o-background-size: cover;
     background-size: cover; 
 }
+
 /* Calculadora */
 .calculadora {
     width: 100%;
@@ -28,45 +29,47 @@ html {
     color: black;
 }
 
-/* Checkbox */
-.calculadora input[type="checkbox"] {
+/* Checkbox personalizado */
+.calculadora input[type="radio"] {
     position: relative;
-    appearance: none; /* Hide default checkbox style */
+    appearance: none;
     width: 20px;
     height: 20px;
     margin: 0 10px 0 0;
-    border-radius: 50%; /* Create a circle for the checkbox */
+    border-radius: 50%;
     border: 2px solid #ccc;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    
 }
 
-/* Checkbox (when selected) */
-.calculadora input[type="checkbox"]:checked {
+/* Checkbox (cuando está seleccionado) */
+.calculadora input[type="radio"]:checked {
     background-color: #333; 
 }
 
-.conten-horario{
+/* Contenedor de horario */
+.conten-horario {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     border-radius: 8px;
 }
 
 /* Recuadro de horario */
-    .horario {
-        display: flex;
-        max-width: 500px;
-        margin: 20px auto;
-        padding: 10px;
-        text-align: center; /* Cambiar a "center" */
-        justify-content: center;
-        border: 2px solid #ccc;
-        border-radius: 8px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-    }
+.horario {
+    display: flex;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 10px;
+    text-align: center;
+    justify-content: center;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
 
-
+/* Inputs de cantidad y total */
 .calculadora input[type="tel"],
 .calculadora input[type="text"] {
     width: 100%;
@@ -78,25 +81,29 @@ html {
     outline: none;
 }
 
+/* Mensaje de error */
 .mensaje-error {
     color: #ff0000;
     font-size: 14px;
     margin-top: 5px;
+    display: none;
 }
+
+/* Estilo responsivo */
 @media (max-width: 768px) {
-    .conten-horario{
+    .conten-horario {
         padding: 0;
         margin: 20px 0;
         width: 100%;
     }
     .calculadora input[type="tel"],
-.calculadora input[type="text"] {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    text-align: center;
-    border-radius: 9px; 
-    border: 2px solid #ccc;
-    outline: none;
-}
+    .calculadora input[type="text"] {
+        width: 100%;
+        padding: 12px;
+        margin: 10px 0;
+        text-align: center;
+        border-radius: 9px; 
+        border: 2px solid #ccc;
+        outline: none;
+    }
 }
