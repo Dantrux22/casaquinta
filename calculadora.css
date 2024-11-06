@@ -89,4 +89,14 @@ html {
         margin: 20px 0;
         width: 100%;
     }
+    .calculadora input[type="tel"],
+.calculadora input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    text-align: center;
+    border-radius: 9px; 
+    border: 2px solid #ccc;
+    outline: none;
+}
 }
