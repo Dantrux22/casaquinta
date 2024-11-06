@@ -67,7 +67,7 @@ html {
     }
 
 
-.calculadora input[type="number"],
+.calculadora input[type="tel"],
 .calculadora input[type="text"] {
     width: 100%;
     padding: 12px;
