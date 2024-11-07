@@ -339,5 +339,55 @@ footer * {
     padding: 2px 5px;
     border-radius: 3px;
   }
+
   
+  .shift-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .shift-buttons label {
+    margin-bottom: 10px;
+  }
+  
+  .shift-buttons input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    appearance: none;
+    border-radius: 50%;
+    border: 2px solid #333;
+    background-color: #fff;
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .shift-buttons input[type="checkbox"]:checked {
+    background-color: #333;
+  }
+  
+  .shift-buttons input[type="checkbox"]:checked::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+  }
+  
+  @media (min-width: 768px) {
+    .shift-buttons {
+      flex-direction: row;
+    }
+    
+    .shift-buttons label {
+      margin-right: 20px;
+      margin-bottom: 0;
+    }
+  }
   

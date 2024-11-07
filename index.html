@@ -163,30 +163,30 @@
 
     <!-- CALENDARIO -->
     <h2 class="sub-titulos">Calendario dias disponibles</h2>
-
     <div class="calendar-container">
-        <div class="navigation">
-          <button onclick="changeMonth(-1)">&#8592; Anterior</button>
-          <h3 id="month-title">Noviembre</h3>
-          <button onclick="changeMonth(1)">Siguiente &#8594;</button>
-        </div>
-        
-        <!-- Botones para seleccionar el turno -->
-        <div class="shift-buttons">
-          <button onclick="changeShift('day')"> 10:00 a 19:00</button>
-          <button onclick="changeShift('night')">21:00 a 06:00</button>
-        </div>
-        <div id="calendar" class="calendar"></div>
-
-        <div class="legend">
-            <span class="available">Fechas Disponible</span>
-            <span class="reserved">Fechas Reservado</span>
-            </div>
-            </div>
+      <div class="navigation">
+        <button onclick="changeMonth(-1)">&#8592; Anterior</button>
+        <h3 id="month-title">Noviembre</h3>
+        <button onclick="changeMonth(1)">Siguiente &#8594;</button>
+      </div>
+      <!-- Botones para seleccionar el turno -->
+      <div class="shift-buttons">
+        <label>
+          <input type="checkbox" id="day-shift" checked onchange="changeShift('day')">
+          10:00 a 19:00
+        </label> 
+        <label>
+          <input type="checkbox" id="night-shift" onchange="changeShift('night')">
+          21:00 a 06:00
+        </label>
+      </div>
+      <div id="calendar" class="calendar"></div>
+      <div class="legend">
+        <span class="available">Fechas Disponible</span>
+        <span class="reserved">Fechas Reservado</span>
+      </div>
     </div>
-
-      
-
+    
  <!-- ADICIONALES     -->
 <div class="adicionales">
     <h2 class="sub-titulos" id="condiciones">Adicionales</h2>
