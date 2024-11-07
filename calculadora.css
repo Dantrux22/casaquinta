@@ -105,5 +105,12 @@ html {
         border-radius: 9px; 
         border: 2px solid #ccc;
         outline: none;
+        font-size: 1.1rem;
     }
+    .horario input[type="radio"] {
+        font-size: 2rem;
+        color: red;
+
+    }
+
 }
