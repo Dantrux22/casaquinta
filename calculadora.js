@@ -1,42 +1,97 @@
-function mostrarCampos() {
-    var tipoAlquiler = document.getElementById("tipo-alquiler").value;
-    var horarioDia = document.getElementById("horario-dia");
+const precioPorHora = 500; 
+const adicionalPorPersona = 5000;
 
-    if (tipoAlquiler === "dia") {
-        horarioDia.style.display = "block";
-    } else {
-        horarioDia.style.display = "none";
-    }
-    calcularTotal();
+function mostrarCampos() {
+  var tipoAlquiler = document.getElementById("tipo-alquiler").value;
+  var horarioDia = document.getElementById("horario-dia");
+  var horarioPersonalizado = document.getElementById("horario-personalizado");
+  
+  if (tipoAlquiler === "dia") {
+    horarioDia.style.display = "block";
+    horarioPersonalizado.style.display = "none";
+  } else {
+    horarioDia.style.display = "none";
+    horarioPersonalizado.style.display = "block";
+  }
+  
+  calcularTotal();
 }
 
 function calcularTotal() {
-    var totalInput = document.getElementById("TOTAL");
-    var cantidadPersonas = parseInt(document.getElementById("cantidad-personas-dia").value) || 0;
-    var selectedHorario = document.querySelector('input[name="horario-dia"]:checked');
-    var total = 0;
-
-    // Si hay un horario seleccionado, calcular el precio
-    if (selectedHorario) {
-        var precioPorPersona = parseInt(selectedHorario.value);
-        total = cantidadPersonas * precioPorPersona;
+  var totalInput = document.getElementById("TOTAL");
+  var cantidadPersonasDia = parseInt(document.getElementById("cantidad-personas-dia").value) || 0;
+  var selectedHorario = document.querySelector('input[name="horario-dia"]:checked');
+  var total = 0;
+  
+  if (selectedHorario) {
+    var precioPorPersona = parseInt(selectedHorario.value);
+    total = cantidadPersonasDia * precioPorPersona;
+  }
+  
+  var cantidadPersonasPersonalizado = parseInt(document.getElementById("cantidad-personas-personalizado").value) || 0;
+  var horaEntrada = document.getElementById("hora-inicio").value;
+  var horaSalida = document.getElementById("hora-fin").value;
+  
+  if (horaEntrada && horaSalida) {
+    const [horasEntrada, minutosEntrada] = horaEntrada.split(":").map(Number);
+    const [horasSalida, minutosSalida] = horaSalida.split(":").map(Number);
+    
+    const totalHoras = calcularHoras(horasEntrada, minutosEntrada, horasSalida, minutosSalida);
+    
+    if (totalHoras > 24) {
+      alert("No se pueden superar las 24 horas.");
+      return;
     }
-
-    // Mostrar el total calculado
-    totalInput.value = total > 0 ? total.toLocaleString('es-AR', {style: 'currency', currency: 'ARS'}) : "";
-
-    // Mostrar mensaje de advertencia si la cantidad no está entre 20 y 80 personas
-    document.getElementById("mensaje-personas-dia").style.display = (cantidadPersonas < 20 || cantidadPersonas > 80) ? "block" : "none";
+    
+    total = totalHoras * precioPorHora * cantidadPersonasPersonalizado + adicionalPorPersona * cantidadPersonasPersonalizado;
+  }
+  
+  totalInput.value = total > 0 ? total.toLocaleString('es-AR', {style: 'currency', currency: 'ARS'}) : "";
+  
+  document.getElementById("mensaje-personas-dia").style.display = (cantidadPersonasDia < 20 || cantidadPersonasDia > 80) ? "block" : "none";
 }
 
+function calcularHoras(horasEntrada, minutosEntrada, horasSalida, minutosSalida) {
+  if (horasEntrada === horasSalida && minutosEntrada === minutosSalida) {
+    return 24; 
+  }
+  
+  const totalMinutosEntrada = horasEntrada * 60 + minutosEntrada;
+  const totalMinutosSalida = horasSalida * 60 + minutosSalida;
+  
+  let diferenciaMinutos = totalMinutosSalida - totalMinutosEntrada;
+  
+  if (diferenciaMinutos < 0) { 
+    diferenciaMinutos += 24 * 60;
+  } else if (totalMinutosEntrada > totalMinutosSalida) { 
+    diferenciaMinutos = totalMinutosEntrada - totalMinutosSalida;
+  }
+  
+  return Math.abs(diferenciaMinutos / 60);
+}
 document.addEventListener("DOMContentLoaded", function() {
-    mostrarCampos();
+  mostrarCampos();
 });
 
-// Actualizar el total automáticamente al ingresar la cantidad de personas
-document.getElementById("cantidad-personas-dia").addEventListener("input", calcularTotal)
+document.getElementById("tipo-alquiler").addEventListener("change", mostrarCampos);
+document.getElementById("cantidad-personas-dia").addEventListener("input", calcularTotal);
+document.getElementById("hora-inicio").addEventListener("input", calcularTotal);
+document.getElementById("hora-fin").addEventListener("input", calcularTotal);
+document.getElementById("cantidad-personas-personalizado").addEventListener("input", calcularTotal);
+document.getElementById("horario-dia-1").addEventListener("change", calcularTotal);
+document.getElementById("horario-dia-2").addEventListener("change", calcularTotal);
+
+function actualizarTotal() {
+  calcularTotal();
+}
+
+setInterval(actualizarTotal, 1000);
 
 
+
+
+
+// CALENDARIO
 const months = [
     {
       name: "Noviembre 2024",
@@ -73,7 +128,7 @@ const months = [
         day: [
           { day: "1", status: "available" }, { day: "2", status: "available" }, { day: "3", status: "available" },
           { day: "4", status: "available" }, { day: "5", status: "available" }, { day: "6", status: "available" },
-          { day: "7", status: "reserved" }, { day: "8", status: "available" }, { day: "9", status: "available" },
+          { day: "7", status: "reserved" }, { day: "8", status: "reserved" }, { day: "9", status: "available" },
           { day: "10", status: "available" }, { day: "11", status: "available" }, { day: "12", status: "available" },
           { day: "13", status: "available" }, { day: "14", status: "available" }, { day: "15", status: "available" },
           { day: "16", status: "available" }, { day: "17", status: "available" }, { day: "18", status: "available" },
@@ -86,7 +141,7 @@ const months = [
         night: [
           { day: "1", status: "available" }, { day: "2", status: "available" }, { day: "3", status: "available" },
           { day: "4", status: "available" }, { day: "5", status: "available" }, { day: "6", status: "available" },
-          { day: "7", status: "available" }, { day: "8", status: "available" }, { day: "9", status: "available" },
+          { day: "7", status: "available" }, { day: "8", status: "reserved" }, { day: "9", status: "available" },
           { day: "10", status: "available" }, { day: "11", status: "available" }, { day: "12", status: "available" },
           { day: "13", status: "available" }, { day: "14", status: "available" }, { day: "15", status: "available" },
           { day: "16", status: "available" }, { day: "17", status: "available" }, { day: "18", status: "available" },

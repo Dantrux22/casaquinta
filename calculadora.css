@@ -2,115 +2,133 @@ html {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover; 
-}
-
-/* Calculadora */
-.calculadora {
-    width: 100%;
+    background-size: cover;
+  }
+  
+  /* Calculadora */
+  .calculadora {
+    width: 80%;
     padding: 20px;
-    margin: auto;
+    margin: 40px auto;
     text-align: center;
-    border-radius: 10px; 
+    border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     outline: none;
-}
-
-/* Contenedor del tipo de alquiler */
-.conten-alquiler {
+    background-color: #f9f9f9;
+  }
+  
+  /* Contenedor del tipo de alquiler */
+  .conten-alquiler {
     width: 100%;
     padding: 10px;
     border: 2px solid #ccc;
-    border-radius: 10px; 
+    border-radius: 10px;
     outline: none;
     font-size: 16px;
     text-align: center;
     background: none;
     color: black;
-}
-
-/* Checkbox personalizado */
-.calculadora input[type="radio"] {
-    position: relative;
-    appearance: none;
-    width: 20px;
-    height: 20px;
-    margin: 0 10px 0 0;
-    border-radius: 50%;
-    border: 2px solid #ccc;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-/* Checkbox (cuando está seleccionado) */
-.calculadora input[type="radio"]:checked {
-    background-color: #333; 
-}
-
-/* Contenedor de horario */
-.conten-horario {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 8px;
-}
-
-/* Recuadro de horario */
-.horario {
-    display: flex;
-    max-width: 500px;
-    margin: 20px auto;
-    padding: 10px;
-    text-align: center;
-    justify-content: center;
-    border: 2px solid #ccc;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-/* Inputs de cantidad y total */
-.calculadora input[type="tel"],
-.calculadora input[type="text"] {
+  }
+  
+  /* Inputs de cantidad y total */
+  .calculadora input[type="tel"], 
+  .calculadora input[type="text"], 
+  .calculadora input[type="time"] {
     width: 100%;
     padding: 12px;
     margin: 10px 0;
     text-align: center;
-    border-radius: 9px; 
+    border-radius: 9px;
     border: 2px solid #ccc;
     outline: none;
-}
-
-/* Mensaje de error */
-.mensaje-error {
+    font-size: 1.1rem;
+  }
+  
+  /* Botón calcular */
+  #calcular-personalizado {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background-color: #333;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  #calcular-personalizado:hover {
+    background-color: #444;
+  }
+  
+  /* Mensaje de error */
+  .mensaje-error {
     color: #ff0000;
     font-size: 14px;
     margin-top: 5px;
     display: none;
+  }
+  
+  /* Mensaje de máximo horas */
+  #max-horas {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  /* Estilo responsivo */
+  @media (max-width: 768px) {
+    .calculadora {
+      width: 90%;
+      padding: 10px;
+    }
+    .calculadora input[type="tel"], 
+  .calculadora input[type="text"], 
+  .calculadora input[type="time"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+  }
 }
 
-/* Estilo responsivo */
-@media (max-width: 768px) {
-    .conten-horario {
-        padding: 0;
-        margin: 20px 0;
-        width: 100%;
-    }
-    .calculadora input[type="tel"],
-    .calculadora input[type="text"] {
-        width: 100%;
-        padding: 12px;
-        margin: 10px 0;
-        text-align: center;
-        border-radius: 9px; 
-        border: 2px solid #ccc;
-        outline: none;
-        font-size: 1.1rem;
-    }
-    .horario input[type="radio"] {
-        font-size: 2rem;
-        color: red;
+/* Checkbox personalizado */
+.calculadora input[type="radio"] {
+  position: relative;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  margin: 0 10px 0 0;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
 
-    }
+/* Checkbox (cuando está seleccionado) */
+.calculadora input[type="radio"]:checked {
+  background-color: #333;
+}
 
+/* Contenedor de horario */
+.conten-horario {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Recuadro de horario */
+.horario {
+  display: flex;
+  max-width: 500px;
+  margin: 20px auto;
+  padding: 10px;
+  text-align: center;
+  justify-content: center;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }

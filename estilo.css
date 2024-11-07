@@ -242,10 +242,10 @@ footer * {
   }
   
   .navigation button {
-    background-color: #3498db;
-    color: white;
+    /* background-color: #3498db; */
+    color: black;
     padding: 8px 16px;
-    font-size: 16px;
+    font-size: 20px;  
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -258,7 +258,6 @@ footer * {
   
   #month-title {
     font-size: 24px;
-    color: #34495e;
   }
   
   .shift-buttons {
@@ -320,7 +319,7 @@ footer * {
   }
   
   .day.reserved {
-    background-color: #e74c3c;
+    background-color: rgb(245, 27, 27);;
     color: white;
   }
   
@@ -346,22 +345,23 @@ footer * {
     }
   }
   .legend {
-    margin-top: 10px;
+    margin-top: 20px;
     font-size: 14px;
   }
   
   .available {
-    color: green; /* reemplaza con el color verde usado en tu calendario */
-    background-color: #C6F4C6; /* agregar un fondo claro para resaltar el texto */
+    color: white; /* reemplaza con el color verde usado en tu calendario */
+    background-color: #27ae60; /* agregar un fondo claro para resaltar el texto */
     padding: 2px 5px;
     border-radius: 3px;
   }
   
   .reserved {
     color: white; /* reemplaza con el color blanco */
-    background-color: red; /* reemplaza con el color rojo usado en tu calendario */
+    background-color: rgb(245, 27, 27); /* reemplaza con el color rojo usado en tu calendario */
     padding: 2px 5px;
     border-radius: 3px;
+    margin: 0 10px;
   }
 
   

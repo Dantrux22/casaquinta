@@ -65,18 +65,18 @@
     <div class="alojamiento">
      
         <ul class="descripcion">
-            <li><b>SALON</b>: 100m2 cerrado + Aire Acondicionado + TV + Ventilador industrial + Internet WiFi + Mesa, Sillas + 2 baños + 1 con ducha.</li>
-            <li><b>PARQUE</b>: Parrilla + Fogonero + Pileta de 8x4 profundidad 1.00 a 2.00 mts2 baños + ducha interior y exterior + Patio Cervecero con sillas y mesas tipo carretes + reposeras + Solarium en deck de madera + Juego infantil con mangrullo hamacas, ruedo colgante y tobogan para menores de 10 años.</li>
+            <li><b>SALÓN</b>: 100m2 cerrado + Aire Acondicionado + TV + Ventilador industrial + Internet WiFi + Mesa, Sillas + 2 baños + 1 con ducha.</li>
+            <li><b>PARQUE</b>: Parrilla + Fogonero + Pileta de 8x4 profundidad 1.00 a 2.00 mts2 baños + ducha interior y exterior + Patio Cervecero con sillas y mesas tipo carretes + reposeras + Solarium en deck de madera + Juego infantil con mangrullo hamacas, ruedo colgante y tobogán para menores de 10 años.</li>
             <li><b>COCINA</b>: Heladera/Freezer + Horno pastelero pizzero + Pava eléctrica + Anafe eléctrico + vajilla bàsica.</li>
             <li><b>JUEGOS</b>: Sapo + Red de Vóley + pelota paleta + tejo de playa + juego de Ñinos.</li>
-            <li><b>HABITACION</b>: matrimonial + tres camas individuales + Aire Acondicionado + ventilador. (Exclivo para hospedaje)</li>
+            <li><b>HABITACIÓN</b>: matrimonial + tres camas individuales + Aire Acondicionado + ventilador. (Exclivo para hospedaje)</li>
         </ul>  
     </div>
 
 <!-- SERVICIOS -->
     <h2 class="sub-titulos" id="servicios">Servicios que ofrecemos:</h2>
     <div class="caracteristicas">
-        <div class="sub-caracteristicas"><i class="fa-solid fa-house" style="color: #333;"></i> Salon</div>
+        <div class="sub-caracteristicas"><i class="fa-solid fa-house" style="color: #333;"></i> Salón</div>
         <div class="sub-caracteristicas"><i class="fa-solid fa-person-swimming" style="color: #333;"></i> Pileta</div>
         <div class="sub-caracteristicas"><i class="fa-solid fa-restroom" style="color: #333;"></i> Sanitarios</div>
         <div class="sub-caracteristicas"><i class="fa-solid fa-tree" style="color: #333;"></i> Parque de juegos</div>
@@ -88,40 +88,61 @@
     </div>
 
     <!-- CALCULADORA -->
-    <h2 class="sub-titulos" id="precio">Precios</h2>
 
+    <h2 class="sub-titulos" id="precio">Precios</h2>
     <div class="calculadora">
-        <label>
-            <select id="tipo-alquiler" class="conten-alquiler" onchange="mostrarCampos()">
-                <option value="dia">Seleccione Horario</option>
-                <!-- <option value="hospedaje">Por Hospedaje</option> -->
-            </select>
+      <label>
+        <select id="tipo-alquiler" class="conten-alquiler" onchange="mostrarCampos()">
+          <option value="dia">Seleccione Horario</option>
+          <option value="Personalizado">Personalizado</option>
+        </select>
+      </label>
+      
+      <div id="horario-dia" class="conten-horario">
+        <label class="horario">
+          <input type="radio" id="horario-dia-1" name="horario-dia" value="4600" onclick="calcularTotal()">
+          10hs a 19hs
         </label>
-    
-        <div id="horario-dia" class="conten-horario">
-            <label class="horario">
-                <input type="radio" id="horario-dia-1" name="horario-dia" value="4600" onclick="calcularTotal()"> 10hs a 19hs
-            </label>
-            <label class="horario">
-                <input type="radio" id="horario-dia-2" name="horario-dia" value="5000" onclick="calcularTotal()"> 21hs a 6am
-            </label>
-            <label>
-                <input type="tel" id="cantidad-personas-dia" placeholder="Cantidad de personas..." style="width: 200px;" pattern="[0-9]*">
-            </label>
-            <br>
-            <span id="mensaje-personas-dia" class="mensaje-error">Debe ser entre 20 y 80 personas</span>
-        </div>
-    
-        <label><input type="text" id="TOTAL" placeholder="TOTAL" readonly style="width: 200px;"></label>
+        <label class="horario">
+          <input type="radio" id="horario-dia-2" name="horario-dia" value="5000" onclick="calcularTotal()">
+          21hs a 6am
+        </label>
+        <label>
+          <input type="tel" id="cantidad-personas-dia" placeholder="Cantidad de personas..." style="width: 200px;" pattern="[0-9]*">
+        </label>
+        <br>
+        <span id="mensaje-personas-dia" class="mensaje-error">Debe ser entre 20 y 80 personas</span>
+      </div>
+      
+      <div id="horario-personalizado" style="display: none;">
+        <label>
+          Hora inicio:
+          <input type="time" id="hora-inicio" />
+        </label>
+        <label>
+          Hora fin:
+          <input type="time" id="hora-fin" />
+        </label>
+        <label>
+          Cantidad de personas:
+          <input type="tel" id="cantidad-personas-personalizado" />
+        </label>
+        <p id="max-horas">Máximo 24 horas. Para consultas adicionales, comuníquese al WhatsApp.</p>
+      </div>
+      
+      <label>
+        <input type="text" id="TOTAL" placeholder="TOTAL" readonly style="width: 200px;">
+      </label>
     </div>
+    
 
     <!-- CALENDARIO -->
     <h2 class="sub-titulos">Calendario dias disponibles</h2>
     <div class="calendar-container">
       <div class="navigation">
-        <button onclick="changeMonth(-1)">&#8592; Anterior</button>
+        <button onclick="changeMonth(-1)"> &#10094;</button>
         <h3 id="month-title">Noviembre</h3>
-        <button onclick="changeMonth(1)">Siguiente &#8594;</button>
+        <button onclick="changeMonth(1)"> &#10095; </button>
       </div>
       <!-- Botones para seleccionar el turno -->
       <div class="shift-buttons">
@@ -136,8 +157,8 @@
       </div>
       <div id="calendar" class="calendar"></div>
       <div class="legend">
-        <span class="available">Fechas Disponible</span>
-        <span class="reserved">Fechas Reservado</span>
+        <span class="available"> Disponible</span>
+        <span class="reserved"> No Disponible</span>
       </div>
     </div>
     <!-- CONDICION DE RESERVA-->
@@ -154,6 +175,7 @@
         <h5><b><i class="fa-regular fa-clock" style="color: #0f7204;"></i> Horarios de reserva</b></h5>
         <li class="condicones">10hs a 19hs</li>
         <li class="condicones">21hs a 6hs</li>
+        <li class="condicones">Personalizado</li>
     </div>
 
     <div class="normas">
@@ -183,9 +205,8 @@
         <h5><i class="fa-solid fa-x" style="color: #ed1919;"></i> No acepta</h5>
         <ul>
             <li class="condicones">Fumar en el interior</li>
-            <li class="condicones">Colocar musica alta</li>
+            <li class="condicones">Colocar música alta</li>
             <li class="condicones">Mascotas</li>
-            <li class="condicones">Dejar mugre</li>
         </ul>
     </div>
 </div>
@@ -194,11 +215,11 @@
     <h2 class="sub-titulos" id="condiciones">Adicionales</h2>
     <ul class="lista-descargas">
         <li class="archivos-des">Parlantes c/u: $10.000</li>
-        <li class="archivos-des">Maquina de humo: $10.000</li>
-        <li class="archivos-des">proyector: $10.000</li>
+        <li class="archivos-des">Máquina de humo: $10.000</li>
+        <li class="archivos-des">Proyector: $10.000</li>
         <li class="archivos-des">Torres de luces (boliche): $30.000</li>
-        <li class="archivos-des">Microfonos c/u: $5.000</li>
-        <li class="archivos-des">pin pong: $15.000</li>
+        <li class="archivos-des">Micrófonos c/u: $5.000</li>
+        <li class="archivos-des">Pin pong: $15.000</li>
     </ul>
 </div>
 <!-- MAPA -->
