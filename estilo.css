@@ -32,20 +32,44 @@
 }
 /* FOTOS */
 .fotos {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    position: relative;
+  position: relative;
+  margin: .3rem;
 }
+
+.fotos-contenedor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fotos-imagenes {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
 .fotos-espacio {
-    flex: 0 0 auto;
-    scroll-snap-align: start;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    max-width: 100% !important; 
-    max-height: 40vh;
-    object-fit: cover;
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  max-width: 100% !important;
+  max-height: 40vh;
+  object-fit: cover;
+  margin: 1px;
 }
+
+.flecha-izquierda, .flecha-derecha {
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1;
+  position: relative;
+}
+
+.flecha-izquierda:hover, .flecha-derecha:hover {
+  transform: scale(1.1);
+}
+
 /* Servicios */
 .caracteristicas {
     margin: 0 auto; 
@@ -207,7 +231,7 @@ footer * {
   h2.sub-titulos {
     font-size: 26px;
     margin-bottom: 20px;
-    color: #2c3e50;
+    color: black;
   }
   
   .navigation {
