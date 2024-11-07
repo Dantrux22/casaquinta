@@ -22,12 +22,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // Galeria
 
-  const flechaIzquierda = document.getElementById('flecha-izquierda');
+const flechaIzquierda = document.getElementById('flecha-izquierda');
 const flechaDerecha = document.getElementById('flecha-derecha');
-const fotos = document.querySelector('.fotos');
+const fotosImagenes = document.querySelector('.fotos-imagenes');
 
 flechaIzquierda.addEventListener('click', () => {
-  fotos.scrollBy({
+  fotosImagenes.scrollBy({
     top: 0,
     left: -300,
     behavior: 'smooth'
@@ -35,7 +35,7 @@ flechaIzquierda.addEventListener('click', () => {
 });
 
 flechaDerecha.addEventListener('click', () => {
-  fotos.scrollBy({
+  fotosImagenes.scrollBy({
     top: 0,
     left: 300,
     behavior: 'smooth'
