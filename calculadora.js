@@ -135,7 +135,7 @@ const months = [
           { day: "19", status: "available" }, { day: "20", status: "available" }, { day: "21", status: "available" },
           { day: "22", status: "reserved" }, { day: "23", status: "reserved" }, { day: "24", status: "reserved" },
           { day: "25", status: "reserved" }, { day: "26", status: "available" }, { day: "27", status: "available" },
-          { day: "28", status: "available" }, { day: "29", status: "available" }, { day: "30", status: "available" },
+          { day: "28", status: "available" }, { day: "29", status: "available" }, { day: "30", status: "reserved" },
           { day: "31", status: "reserved" }
         ],
         night: [
