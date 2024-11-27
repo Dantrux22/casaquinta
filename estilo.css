@@ -219,199 +219,280 @@ footer * {
 
 /* Contenedor principal */
 .calendar-container {
-    max-width: 900px;
-    margin: 30px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-  }
-  
-  h2.sub-titulos {
-    font-size: 26px;
-    margin-bottom: 20px;
-    color: black;
-  }
-  
-  .navigation {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .navigation button {
-    /* background-color: #3498db; */
-    color: black;
-    padding: 8px 16px;
-    font-size: 20px;  
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .navigation button:hover {
-    background-color: #2980b9;
-  }
-  
-  #month-title {
-    font-size: 24px;
-  }
-  
-  .shift-buttons {
-    margin-bottom: 20px;
-  }
-  
-  .shift-buttons button {
-    background-color: #16a085;
-    color: white;
-    padding: 8px 16px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 0 10px;
-    transition: background-color 0.3s;
-  }
-  
-  .shift-buttons button:hover {
-    background-color: #1abc9c;
-  }
-  
-  .calendar {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 10px;
-    justify-items: center;
-    font-size: 18px;
-  }
-  
-  .day-header {
-    font-weight: bold;
-    color: #34495e;
-    padding: 10px 0;
-    background-color: #ecf0f1;
-    border-radius: 5px;
-  }
-  
-  .day {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 5px;
-    font-size: 18px;
-    background-color: #ecf0f1;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .day:hover {
-    background-color: #d5dbdb;
-  }
-  
-  .day.available {
-    background-color: #27ae60;
-    color: white;
-  }
-  
-  .day.reserved {
-    background-color: rgb(245, 27, 27);;
-    color: white;
-  }
-  
-  @media (max-width: 768px) {
-    .calendar-container {
-      padding: 15px;
-    }
-  
-    .calendar {
-      grid-template-columns: repeat(7, 1fr);
-    }
-  
-    .day {
-      width: 35px;
-      height: 35px;
-      font-size: 16px;
-    }
-  
-    .navigation button,
-    .shift-buttons button {
-      font-size: 14px;
-      padding: 6px 12px;
-    }
-  }
-  .legend {
-    margin-top: 20px;
-    font-size: 14px;
-  }
-  
-  .available {
-    color: white; /* reemplaza con el color verde usado en tu calendario */
-    background-color: #27ae60; /* agregar un fondo claro para resaltar el texto */
-    padding: 2px 5px;
-    border-radius: 3px;
-  }
-  
-  .reserved {
-    color: white; /* reemplaza con el color blanco */
-    background-color: rgb(245, 27, 27); /* reemplaza con el color rojo usado en tu calendario */
-    padding: 2px 5px;
-    border-radius: 3px;
-    margin: 0 10px;
-  }
+  max-width: 900px;
+  margin:  auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
 
-  
+h2.sub-titulos {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.navigation button {
+  /* background-color: #3498db; */
+  color: black;
+  padding: 8px 16px;
+  font-size: 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.navigation button:hover {
+  background-color: #2980b9;
+}
+
+#month-title {
+  font-size: 24px;
+}
+
+.shift-buttons {
+  margin-bottom: 20px;
+}
+
+.shift-buttons button {
+  background-color: #16a085;
+  color: white;
+  padding: 8px 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 10px;
+  transition: background-color 0.3s;
+}
+
+.shift-buttons button:hover {
+  background-color: #1abc9c;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  justify-items: center;
+  font-size: 18px;
+}
+
+.day-header {
+  font-weight: bold;
+  color: #34495e;
+  padding: 10px 0;
+  background-color: #ecf0f1;
+  border-radius: 5px;
+}
+
+.day {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  font-size: 18px;
+  background-color: #ecf0f1;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+}
+
+.day:hover {
+  background-color: #d5dbdb;
+}
+
+.day.available {
+  background-color: #27ae60;
+  color: white;
+}
+
+.day.reserved {
+  background-color: rgb(245, 27, 27);
+  color: white;
+}
+
+/* Media queries para hacerlo responsive */
+
+@media (max-width: 768px) {
+  .calendar-container {
+    padding: 15px;
+  }
+  .calendar {
+    grid-template-columns: repeat(7, 1fr);
+  }
+  .day {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+  .navigation button, .shift-buttons button {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+}
+@media (max-width: 360px) {
+  .calendar-container {
+    padding: 10px;
+  }
+  .calendar {
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+  }
+  .day {
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
+  }
+  .navigation button, .shift-buttons button {
+    font-size: 10px;
+    padding: 2px 4px;
+  }
   .shift-buttons {
-    display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
   }
-  
   .shift-buttons label {
     margin-bottom: 10px;
   }
-  
-  .shift-buttons input[type="checkbox"] {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-    appearance: none;
-    border-radius: 50%;
-    border: 2px solid #333;
-    background-color: #fff;
-    position: relative;
-    cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .calendar-container {
+    padding: 0px;
   }
-  
-  .shift-buttons input[type="checkbox"]:checked {
-    background-color: #333;
+  .calendar {
+    grid-template-columns: repeat(7, 1fr);
   }
-  
-  .shift-buttons input[type="checkbox"]:checked::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #fff;
+  .day {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
   }
-  
-  @media (min-width: 768px) {
-    .shift-buttons {
-      flex-direction: row;
-    }
-    
-    .shift-buttons label {
-      margin-right: 20px;
-      margin-bottom: 0;
-    }
+  .navigation button, .shift-buttons button {
+    font-size: 12px;
+    padding: 4px 8px;
   }
-  
+}
+
+.legend {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.available {
+  color: white;
+  /* reemplaza con el color verde usado en tu calendario */
+  background-color: #27ae60;
+  /* agregar un fondo claro para resaltar el texto */
+  padding: 2px 5px;
+  border-radius: 3px;
+}
+
+.reserved {
+  color: white;
+  /* reemplaza con el color blanco */
+  background-color: rgb(245, 27, 27);
+  /* reemplaza con el color rojo usado en tu calendario */
+  padding: 2px 5px;
+  border-radius: 3px;
+  margin: 0 10px;
+}
+
+.shift-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.shift-buttons label {
+  margin-bottom: 10px;
+}
+
+.shift-buttons input[type="checkbox"] {
+width: 20px;
+height: 20px;
+margin-right: 10px;
+appearance: none;
+border-radius: 50%;
+border: 2px solid #333;
+background-color: #fff;
+position: relative;
+cursor: pointer;
+transition: background-color 0.3s;
+}
+
+.shift-buttons input[type="checkbox"]:checked {
+background-color: #333;
+}
+
+.shift-buttons input[type="checkbox"]:checked::before {
+content: "";
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 10px;
+height: 10px;
+border-radius: 50%;
+background-color: #fff;
+}
+
+@media (min-width: 768px) {
+.shift-buttons {
+flex-direction: row;
+}
+.shift-buttons label {
+margin-right: 20px;
+margin-bottom: 0;
+}
+}
+
+@media (max-width: 480px) {
+.calendar-container {
+padding: 0px;
+}
+.calendar {
+grid-template-columns: repeat(7, 1fr);
+}
+.day {
+width: 30px;
+height: 30px;
+font-size: 14px;
+}
+.navigation button, .shift-buttons button {
+font-size: 12px;
+padding: 4px 8px;
+}
+}
+
+@media (max-width: 320px) {
+.calendar-container {
+padding: 5px;
+}
+.calendar {
+grid-template-columns: repeat(7, 1fr);
+}
+.day {
+width: 25px;
+height: 25px;
+font-size: 12px;
+}
+.navigation button, .shift-buttons button {
+font-size: 10px;
+padding: 2px 4px;
+}
+}
+
