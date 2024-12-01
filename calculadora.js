@@ -1,5 +1,5 @@
 const precioPorHora = 500; 
-const adicionalPorPersona = 5000;
+const adicionalPorPersona = 5500;
 
 function mostrarCampos() {
   var tipoAlquiler = document.getElementById("tipo-alquiler").value;
@@ -188,11 +188,11 @@ const months = [
          name: "Febrero 2025",
         shifts: {
           day: [
-            { day: "1", status: "available" }, { day: "2", status: "available" }, { day: "3", status: "available" },
+            { day: "1", status: "reserved" }, { day: "2", status: "available" }, { day: "3", status: "available" },
             { day: "4", status: "available" }, { day: "5", status: "available" }, { day: "6", status: "available" },
             { day: "7", status: "available" }, { day: "8", status: "available" }, { day: "9", status: "available" },
             { day: "10", status: "available" }, { day: "11", status: "available" }, { day: "12", status: "available" },
-            { day: "13", status: "available" }, { day: "14", status: "available" }, { day: "15", status: "available" },
+            { day: "13", status: "available" }, { day: "14", status: "available" }, { day: "15", status: "reserved" },
             { day: "16", status: "available" }, { day: "17", status: "available" }, { day: "18", status: "available" },
             { day: "19", status: "available" }, { day: "20", status: "available" }, { day: "21", status: "available" },
             { day: "22", status: "available" }, { day: "23", status: "available" }, { day: "24", status: "available" },
