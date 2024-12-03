@@ -131,7 +131,7 @@ const months = [
           { day: "7", status: "reserved" }, { day: "8", status: "reserved" }, { day: "9", status: "reserved" },
           { day: "10", status: "available" }, { day: "11", status: "available" }, { day: "12", status: "available" },
           { day: "13", status: "reserved" }, { day: "14", status: "reserved" }, { day: "15", status: "reserved" },
-          { day: "16", status: "available" }, { day: "17", status: "available" }, { day: "18", status: "available" },
+          { day: "16", status: "reserved" }, { day: "17", status: "available" }, { day: "18", status: "available" },
           { day: "19", status: "available" }, { day: "20", status: "available" }, { day: "21", status: "reserved" },
           { day: "22", status: "reserved" }, { day: "23", status: "reserved" }, { day: "24", status: "reserved" },
           { day: "25", status: "reserved" }, { day: "26", status: "available" }, { day: "27", status: "available" },
