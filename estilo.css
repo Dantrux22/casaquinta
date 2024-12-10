@@ -16,7 +16,6 @@
     text-decoration: none;
     list-style: none;
   }
-
 .sub-titulos{
     border-bottom:  1px solid gray;
     font-size: 1.5rem; 
@@ -461,6 +460,7 @@ margin-bottom: 0;
 }
 
 @media (max-width: 480px) {
+
 .calendar-container {
 padding: 0px;
 }
@@ -477,7 +477,11 @@ font-size: 12px;
 padding: 4px 8px;
 }
 }
-
+@media (max-width: 375px) {
+.titulo{
+  font-size: 1.5rem!important;
+}
+}
 @media (max-width: 320px) {
 .calendar-container {
 padding: 5px;
@@ -494,5 +498,13 @@ font-size: 12px;
 font-size: 10px;
 padding: 2px 4px;
 }
+.titulo{
+  font-size: .2rem !important;
+}
 }
 
+@media(max-width: 340px){
+  .titulo{
+    font-size: 1.4rem !important;
+  }
+}
