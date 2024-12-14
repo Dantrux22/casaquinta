@@ -16,7 +16,10 @@ html {
     outline: none;
     background-color: #f9f9f9;
   }
-  
+  .descripcion-p{
+    margin: 25px;
+    line-height: 1.5;
+  }
   /* Contenedor del tipo de alquiler */
   .conten-alquiler {
     width: 100%;

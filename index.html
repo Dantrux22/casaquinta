@@ -26,12 +26,11 @@
       </button>
     </div>
     <nav class="nave" id="nav-menu">
-      <a class="nave-1" href="#alojamiento">Alojamiento</a>
-      <a class="nave-1" href="#servicios">Servicios</a>
-      <a class="nave-1" href="#ubicacion">Ubicacion</a>
       <a class="nave-1" href="#condiciones">Condiciones</a>
       <a class="nave-1" href="#precio">Precios</a>
-      <a class="nave-1" href="#descarga">Descarga</a>
+      <a class="nave-1" href="#descarga">Normativa y Contrato</a>
+      <a class="nave-1" href="#ubicacion">Ubicacion</a>
+
     </nav>
   </header>
 
@@ -68,12 +67,38 @@
         <ul class="descripcion">
             <li><b>SALÓN</b>: 100m2 cerrado + Aire Acondicionado + TV + Ventilador industrial + Internet WiFi + Mesa, Sillas + 2 baños + 1 con ducha.</li>
             <li><b>PARQUE</b>: Parrilla + Fogonero + Pileta de 8x4 profundidad 1.00 a 2.00 mts2 baños + ducha interior y exterior + Patio Cervecero con sillas y mesas tipo carretes + reposeras + Solarium en deck de madera + Juego infantil con mangrullo hamacas, ruedo colgante y tobogán para menores de 10 años.</li>
-            <li><b>COCINA</b>: Heladera/Freezer + Horno pastelero pizzero + Pava eléctrica + Anafe eléctrico + vajilla bàsica.</li>
-            <li><b>JUEGOS</b>: Sapo + Red de Vóley + pelota paleta + tejo de playa + juego de Ñinos.</li>
-            <li><b>HABITACIÓN</b>: matrimonial + tres camas individuales + Aire Acondicionado + ventilador. (Exclivo para hospedaje)</li>
+            <li><b>COCINA</b>: Heladera/Freezer + Horno pizzero + Pava eléctrica + Horno electrico + Microondas + Anafe eléctrico + vajilla bàsica.</li>
+            <li><b>JUEGOS</b>: Sapo + Red de Vóley + pelota paleta + tejo de playa + juego de Ñinos + Pool + Metegol.</li>
         </ul>  
     </div>
+       <!-- CALENDARIO -->
+    <h2 class="sub-titulos">Calendario dias disponibles</h2>
+    <P class="descripcion-p"> Consulta nuestras fechas disponibles (10hs-19hs y 21hs-06hs).  <b>Importante: la reserva no se puede realizar en esta página</b>. Verifica la disponibilidad y luego envíanos un mensaje por WhatsApp para reservar.
+    </P>
 
+    <div class="calendar-container">
+      <div class="navigation">
+        <button onclick="changeMonth(-1)"> &#10094;</button>
+        <h3 id="month-title">Noviembre</h3>
+        <button onclick="changeMonth(1)"> &#10095; </button>
+      </div>
+      <!-- Botones para seleccionar el turno -->
+      <div class="shift-buttons">
+        <label>
+          <input type="checkbox" id="day-shift" checked onchange="changeShift('day')">
+          10:00 a 19:00
+        </label> 
+        <label>
+          <input type="checkbox" id="night-shift" onchange="changeShift('night')">
+          21:00 a 06:00
+        </label>
+      </div>
+      <div id="calendar" class="calendar"></div>
+      <div class="legend">
+        <span class="available"> Disponible</span>
+        <span class="reserved"> No Disponible</span>
+      </div>
+    </div>
 <!-- SERVICIOS -->
     <h2 class="sub-titulos" id="servicios">Servicios que ofrecemos:</h2>
     <div class="caracteristicas">
@@ -91,7 +116,7 @@
     <!-- CALCULADORA -->
 
     <h2 class="sub-titulos" id="precio">Precios</h2>
-    <p>Utiliza la calculadora para calcular tu presupuesto. Elige un rango horario o personaliza tu opción. tenga en cuenta que este cálculo es solo informativo. Para confirmar tu presupuesto y realizar una reserva, se realiza meduante WhatsApp</p>
+    <p class="descripcion-p">Utiliza la calculadora para calcular tu presupuesto. Elige un rango horario o personaliza tu opción. tenga en cuenta que este cálculo es solo informativo. Para confirmar tu presupuesto y realizar una reserva, se realiza meduante WhatsApp</p>
     <div class="calculadora">
       <label>
         <select id="tipo-alquiler" class="conten-alquiler" onchange="mostrarCampos()">
@@ -138,34 +163,7 @@
     </div>
     
 
-    <!-- CALENDARIO -->
-    <h2 class="sub-titulos">Calendario dias disponibles</h2>
-    <P> Consulta nuestras fechas disponibles (10hs-19hs y 21hs-06hs).  <b>Importante: la reserva no se puede realizar en esta página</b>. Verifica la disponibilidad y luego envíanos un mensaje por WhatsApp para reservar.
-    </P>
-
-    <div class="calendar-container">
-      <div class="navigation">
-        <button onclick="changeMonth(-1)"> &#10094;</button>
-        <h3 id="month-title">Noviembre</h3>
-        <button onclick="changeMonth(1)"> &#10095; </button>
-      </div>
-      <!-- Botones para seleccionar el turno -->
-      <div class="shift-buttons">
-        <label>
-          <input type="checkbox" id="day-shift" checked onchange="changeShift('day')">
-          10:00 a 19:00
-        </label> 
-        <label>
-          <input type="checkbox" id="night-shift" onchange="changeShift('night')">
-          21:00 a 06:00
-        </label>
-      </div>
-      <div id="calendar" class="calendar"></div>
-      <div class="legend">
-        <span class="available"> Disponible</span>
-        <span class="reserved"> No Disponible</span>
-      </div>
-    </div>
+   
     <!-- CONDICION DE RESERVA-->
 <h2 class="sub-titulos" id="condiciones">Condiciones de la reserva</h2>
 
@@ -237,12 +235,11 @@
 </div>
 <!-- DESCARGAS -->
         <div class="descargas" id="descarga">
-            <h2 class="sub-titulos"id="descargas">Archivos para descargar   </h2>
+            <h2 class="sub-titulos"id="descargas">Normativa y Contrato del Alquiler</h2>
             <ul class="lista-descargas">
-                <li class="archivos-des"><a href="CONTRATO DE LOCACION CASA DE EVENTOS (1).pdf" download>Modelo de contrato</a></li>
-                <li class="archivos-des"><a href="ruta_del_archivo_2" download>Normas y condiciones</a></li>
-                <!-- <li class="archivos-des"><a href="ruta_del_archivo_3" download>Archivo 3</a></li> -->
-                <a class="archivos-des" href="CONTRATO DE LOCACION CASA DE EVENTOS (1).pdf" target="_blank" rel="noopener noreferrer">Modelo de contrato</a>
+                <a class="archivos-des" href="CONTRATO DE LOCACION CASA DE EVENTOS (1).pdf" target="_blank" rel="noopener noreferrer">Modelo de contrato</a> <br> <br>
+                <a class="archivos-des" href="Normas y condiciones (1).pdf" target="_blank" rel="noopener noreferrer">Normas y condicones</a> <br> <br>
+
             </ul>
         </div>
     </section>
