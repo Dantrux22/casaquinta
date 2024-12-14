@@ -47,7 +47,6 @@
             <img src="./fotos/foto5.jpg" class="fotos-espacio">
             <img src="./fotos/foto6.jpg" class="fotos-espacio">
             <img src="./fotos/foto7.jpg" class="fotos-espacio">
-            <img src="./fotos/foto8.jpg" class="fotos-espacio">
             <img src="./fotos/foto9.jpeg" class="fotos-espacio">
             <img src="./fotos/foto10.jpeg" class="fotos-espacio">
             <img src="./fotos/foto11.jpeg" class="fotos-espacio">
@@ -118,13 +117,6 @@
     <h2 class="sub-titulos" id="precio">Precios</h2>
     <p class="descripcion-p">Utiliza la calculadora para calcular tu presupuesto. Elige un rango horario o personaliza tu opción. tenga en cuenta que este cálculo es solo informativo. Para confirmar tu presupuesto y realizar una reserva, se realiza meduante WhatsApp</p>
     <div class="calculadora">
-      <label>
-        <select id="tipo-alquiler" class="conten-alquiler" onchange="mostrarCampos()">
-          <option value="dia">Seleccione Horario</option>
-          <option value="Personalizado">Personalizado</option>
-        </select>
-      </label>
-      
       <div id="horario-dia" class="conten-horario">
         <label class="horario">
           <input type="radio" id="horario-dia-1" name="horario-dia" value="5000" onclick="calcularTotal()">
@@ -140,23 +132,6 @@
         <br>
         <span id="mensaje-personas-dia" class="mensaje-error">Debe ser entre 20 y 80 personas</span>
       </div>
-      
-      <div id="horario-personalizado" style="display: none;">
-        <label>
-          Hora inicio:
-          <input type="time" id="hora-inicio" />
-        </label>
-        <label>
-          Hora fin:
-          <input type="time" id="hora-fin" />
-        </label>
-        <label>
-          Cantidad de personas:
-          <input type="tel" id="cantidad-personas-personalizado" />
-        </label>
-        <p id="max-horas">Máximo 24 horas. Para consultas adicionales, comuníquese al WhatsApp.</p>
-      </div>
-      
       <label>
         <input type="text" id="TOTAL" placeholder="TOTAL" readonly style="width: 200px;">
       </label>

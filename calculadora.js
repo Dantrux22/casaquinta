@@ -1,95 +1,21 @@
-const precioPorHora = 500; 
-const adicionalPorPersona = 5500;
-
-function mostrarCampos() {
-  var tipoAlquiler = document.getElementById("tipo-alquiler").value;
-  var horarioDia = document.getElementById("horario-dia");
-  var horarioPersonalizado = document.getElementById("horario-personalizado");
-  
-  if (tipoAlquiler === "dia") {
-    horarioDia.style.display = "block";
-    horarioPersonalizado.style.display = "none";
-  } else {
-    horarioDia.style.display = "none";
-    horarioPersonalizado.style.display = "block";
-  }
-  
-  calcularTotal();
-}
-
 function calcularTotal() {
   var totalInput = document.getElementById("TOTAL");
   var cantidadPersonasDia = parseInt(document.getElementById("cantidad-personas-dia").value) || 0;
   var selectedHorario = document.querySelector('input[name="horario-dia"]:checked');
-  var total = 0;
-  
-  if (selectedHorario) {
-    var precioPorPersona = parseInt(selectedHorario.value);
-    total = cantidadPersonasDia * precioPorPersona;
-  }
-  
-  var cantidadPersonasPersonalizado = parseInt(document.getElementById("cantidad-personas-personalizado").value) || 0;
-  var horaEntrada = document.getElementById("hora-inicio").value;
-  var horaSalida = document.getElementById("hora-fin").value;
-  
-  if (horaEntrada && horaSalida) {
-    const [horasEntrada, minutosEntrada] = horaEntrada.split(":").map(Number);
-    const [horasSalida, minutosSalida] = horaSalida.split(":").map(Number);
-    
-    const totalHoras = calcularHoras(horasEntrada, minutosEntrada, horasSalida, minutosSalida);
-    
-    if (totalHoras > 24) {
-      alert("No se pueden superar las 24 horas.");
-      return;
-    }
-    
-    total = totalHoras * precioPorHora * cantidadPersonasPersonalizado + adicionalPorPersona * cantidadPersonasPersonalizado;
-  }
-  
+  var precio = parseInt(selectedHorario.value);
+
+  var total = cantidadPersonasDia * precio;
   totalInput.value = total > 0 ? total.toLocaleString('es-AR', {style: 'currency', currency: 'ARS'}) : "";
-  
   document.getElementById("mensaje-personas-dia").style.display = (cantidadPersonasDia < 20 || cantidadPersonasDia > 80) ? "block" : "none";
 }
 
-function calcularHoras(horasEntrada, minutosEntrada, horasSalida, minutosSalida) {
-  if (horasEntrada === horasSalida && minutosEntrada === minutosSalida) {
-    return 24; 
-  }
-  
-  const totalMinutosEntrada = horasEntrada * 60 + minutosEntrada;
-  const totalMinutosSalida = horasSalida * 60 + minutosSalida;
-  
-  let diferenciaMinutos = totalMinutosSalida - totalMinutosEntrada;
-  
-  if (diferenciaMinutos < 0) { 
-    diferenciaMinutos += 24 * 60;
-  } else if (totalMinutosEntrada > totalMinutosSalida) { 
-    diferenciaMinutos = totalMinutosEntrada - totalMinutosSalida;
-  }
-  
-  return Math.abs(diferenciaMinutos / 60);
-}
 document.addEventListener("DOMContentLoaded", function() {
-  mostrarCampos();
+  document.getElementById("cantidad-personas-dia").addEventListener("input", function() {
+    calcularTotal();
+  });
+  document.getElementById("horario-dia-1").addEventListener("change", calcularTotal);
+  document.getElementById("horario-dia-2").addEventListener("change", calcularTotal);
 });
-
-document.getElementById("tipo-alquiler").addEventListener("change", mostrarCampos);
-document.getElementById("cantidad-personas-dia").addEventListener("input", calcularTotal);
-document.getElementById("hora-inicio").addEventListener("input", calcularTotal);
-document.getElementById("hora-fin").addEventListener("input", calcularTotal);
-document.getElementById("cantidad-personas-personalizado").addEventListener("input", calcularTotal);
-document.getElementById("horario-dia-1").addEventListener("change", calcularTotal);
-document.getElementById("horario-dia-2").addEventListener("change", calcularTotal);
-
-function actualizarTotal() {
-  calcularTotal();
-}
-
-setInterval(actualizarTotal, 1000);
-
-
-
-
 
 // CALENDARIO
 const months = [

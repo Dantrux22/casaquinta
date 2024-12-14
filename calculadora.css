@@ -8,17 +8,15 @@ html {
   /* Calculadora */
   .calculadora {
     width: 80%;
-    padding: 20px;
-    margin: 40px auto;
+    margin: 10px auto;
     text-align: center;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 10px rgb(97, 90, 90);
     outline: none;
-    background-color: #f9f9f9;
   }
   .descripcion-p{
     margin: 25px;
-    line-height: 1.5;
+    line-height: 1;
   }
   /* Contenedor del tipo de alquiler */
   .conten-alquiler {
@@ -81,8 +79,9 @@ html {
   /* Estilo responsivo */
   @media (max-width: 768px) {
     .calculadora {
-      width: 90%;
+      width: 100%;
       padding: 10px;
+      box-shadow: 0 0 10px rgb(119, 111, 111);
     }
     .calculadora input[type="tel"], 
   .calculadora input[type="text"], 
@@ -118,13 +117,12 @@ html {
   align-items: center;
   border-radius: 8px;
   padding: 20px;
-  background-color: #f9f9f9;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 /* Recuadro de horario */
 .horario {
   display: flex;
+  width: 250px;
   max-width: 500px;
   margin: 20px auto;
   padding: 10px;
