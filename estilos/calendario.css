@@ -104,70 +104,7 @@
     background-color: rgb(245, 27, 27);
     color: white;
   }
-  
-  /* Media queries para hacerlo responsive */
-  
-  @media (max-width: 768px) {
-    .calendar-container {
-      padding: 15px;
-    }
-    .calendar {
-      grid-template-columns: repeat(7, 1fr);
-    }
-    .day {
-      width: 35px;
-      height: 35px;
-      font-size: 16px;
-    }
-    .navigation button, .shift-buttons button {
-      font-size: 14px;
-      padding: 6px 12px;
-    }
-  }
-  @media (max-width: 360px) {
-    .calendar-container {
-      padding: 10px;
-    }
-    .calendar {
-      grid-template-columns: repeat(7, 1fr);
-      gap: 5px;
-    }
-    .day {
-      width: 20px;
-      height: 20px;
-      font-size: 12px;
-    }
-    .navigation button, .shift-buttons button {
-      font-size: 10px;
-      padding: 2px 4px;
-    }
-    .shift-buttons {
-      flex-direction: column;
-      align-items: center;
-    }
-    .shift-buttons label {
-      margin-bottom: 10px;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .calendar-container {
-      padding: 0px;
-    }
-    .calendar {
-      grid-template-columns: repeat(7, 1fr);
-    }
-    .day {
-      width: 30px;
-      height: 30px;
-      font-size: 14px;
-    }
-    .navigation button, .shift-buttons button {
-      font-size: 12px;
-      padding: 4px 8px;
-    }
-  }
-  
+
   .legend {
     margin-top: 20px;
     font-size: 14px;
@@ -231,63 +168,77 @@
   border-radius: 50%;
   background-color: #fff;
   }
+
   
-  @media (min-width: 768px) {
+ /* Media queries para hacerlo responsive */
+
+@media (max-width: 768px) {
+  .calendar-container {
+    padding: 15px;
+  }
+  .calendar {
+    grid-template-columns: repeat(7, 1fr);
+  }
+  .day {
+    width: 35px;
+    height: 35px;
+    font-size: 16px;
+  }
+  .navigation button, .shift-buttons button {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .calendar-container {
+    padding: 0px;
+  }
+  .calendar {
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+  }
+  .day {
+    width: 30px;
+    height: 30px;
+    font-size: 14px;
+  }
+  .navigation button, .shift-buttons button {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
   .shift-buttons {
-  flex-direction: row;
+    flex-direction: column;
+    align-items: center;
   }
   .shift-buttons label {
-  margin-right: 20px;
-  margin-bottom: 0;
+    margin-bottom: 10px;
   }
+}
+
+@media (max-width: 375px) {
+  .titulo {
+    font-size: 1.5rem !important;
   }
-  
-  @media (max-width: 480px) {
-  
+}
+
+@media (max-width: 320px) {
   .calendar-container {
-  padding: 0px;
+    padding: 5px;
   }
   .calendar {
-  grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(7, 1fr);
   }
   .day {
-  width: 30px;
-  height: 30px;
-  font-size: 14px;
+    width: 25px;
+    height: 25px;
+    font-size: 12px;
   }
   .navigation button, .shift-buttons button {
-  font-size: 12px;
-  padding: 4px 8px;
+    font-size: 10px;
+    padding: 2px 4px;
   }
+  .titulo {
+    font-size: 1.4rem !important;
   }
-  @media (max-width: 375px) {
-  .titulo{
-    font-size: 1.5rem!important;
-  }
-  }
-  @media (max-width: 320px) {
-  .calendar-container {
-  padding: 5px;
-  }
-  .calendar {
-  grid-template-columns: repeat(7, 1fr);
-  }
-  .day {
-  width: 25px;
-  height: 25px;
-  font-size: 12px;
-  }
-  .navigation button, .shift-buttons button {
-  font-size: 10px;
-  padding: 2px 4px;
-  }
-  .titulo{
-    font-size: .2rem !important;
-  }
-  }
-  
-  @media(max-width: 340px){
-    .titulo{
-      font-size: 1.4rem !important;
-    }
-  }
+}
