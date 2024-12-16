@@ -242,3 +242,14 @@
     font-size: 1.4rem !important;
   }
 }
+@media (max-width: 360px) {
+  .calendar {
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+  }
+  .day {
+    width: 25px;
+    height: 25px;
+    font-size: 12px;
+  }
+}
