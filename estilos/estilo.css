@@ -12,14 +12,6 @@
     -o-background-size: cover;
     background-size: cover; 
 }
-:root{
-    --color-primario:#03045e;
-    --color-secundario:#0077b6;
-    --color-terciario:#00b4d8;
-    --color-fondo:#0077b6;
-    --color-texto:#caf0f8;
-}
-
   li, ul, a{
     text-decoration: none;
     list-style: none;
