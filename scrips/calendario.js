@@ -14,7 +14,7 @@ const months = [
           { day: "22", status: "reserved" }, { day: "23", status: "reserved" }, { day: "24", status: "reserved" },
           { day: "25", status: "reserved" }, { day: "26", status: "available" }, { day: "27", status: "available" },
           { day: "28", status: "reserved" }, { day: "29", status: "reserved" }, { day: "30", status: "available" },
-          { day: "31", status: "reserved" }
+          { day: "31", status: "available" }
         ],
         night: [
           { day: "1", status: "available" }, { day: "2", status: "available" }, { day: "3", status: "available" },
@@ -27,7 +27,7 @@ const months = [
           { day: "22", status: "available" }, { day: "23", status: "available" }, { day: "24", status: "reserved" },
           { day: "25", status: "available" }, { day: "26", status: "available" }, { day: "27", status: "available" },
           { day: "28", status: "available" }, { day: "29", status: "available" }, { day: "30", status: "available" },
-          { day: "31", status: "reserved" }
+          { day: "31", status: "available" }
         ]
       }
     },
@@ -35,7 +35,7 @@ const months = [
       name: "Enero 2025",
       shifts: {
         day: [
-          { day: "1", status: "reserved" }, { day: "2", status: "available" }, { day: "3", status: "available" },
+          { day: "1", status: "available" }, { day: "2", status: "available" }, { day: "3", status: "available" },
           { day: "4", status: "available" }, { day: "5", status: "reserved" }, { day: "6", status: "available" },
           { day: "7", status: "available" }, { day: "8", status: "available" }, { day: "9", status: "available" },
           { day: "10", status: "available" }, { day: "11", status: "reserved" }, { day: "12", status: "reserved" },
