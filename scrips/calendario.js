@@ -95,7 +95,7 @@ const months = [
         name: "Marzo 2025",
         shifts: {
           day: [
-            { day: "1", status: "available" }, { day: "2", status: "available" }, { day: "3", status: "available" },
+            { day: "1", status: "reserved" }, { day: "2", status: "available" }, { day: "3", status: "available" },
             { day: "4", status: "available" }, { day: "5", status: "available" }, { day: "6", status: "available" },
             { day: "7", status: "available" }, { day: "8", status: "available" }, { day: "9", status: "available" },
             { day: "10", status: "available" }, { day: "11", status: "available" }, { day: "12", status: "available" },
