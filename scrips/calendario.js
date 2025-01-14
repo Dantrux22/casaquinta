@@ -9,10 +9,10 @@ const months = [
           { day: "7", status: "available" }, { day: "8", status: "available" }, { day: "9", status: "reserved" },
           { day: "10", status: "available" }, { day: "11", status: "reserved" }, { day: "12", status: "reserved" },
           { day: "13", status: "available" }, { day: "14", status: "reserved" }, { day: "15", status: "available" },
-          { day: "16", status: "available" }, { day: "17", status: "reserved" }, { day: "18", status: "reserved" },
+          { day: "16", status: "reserved" }, { day: "17", status: "reserved" }, { day: "18", status: "reserved" },
           { day: "19", status: "reserved" }, { day: "20", status: "available" }, { day: "21", status: "available" },
           { day: "22", status: "reserved" }, { day: "23", status: "available" }, { day: "24", status: "reserved" },
-          { day: "25", status: "reserved" }, { day: "26", status: "reserved" }, { day: "27", status: "available" },
+          { day: "25", status: "reserved" }, { day: "26", status: "reserved" }, { day: "27", status: "reserved" },
           { day: "28", status: "reserved" }, { day: "29", status: "available" }, { day: "30", status: "available" },
           { day: "31", status: "available" }
         ],
@@ -42,7 +42,7 @@ const months = [
             { day: "13", status: "available" }, { day: "14", status: "available" }, { day: "15", status: "reserved" },
             { day: "16", status: "available" }, { day: "17", status: "available" }, { day: "18", status: "available" },
             { day: "19", status: "available" }, { day: "20", status: "available" }, { day: "21", status: "available" },
-            { day: "22", status: "reserved" }, { day: "23", status: "available" }, { day: "24", status: "reserved" },
+            { day: "22", status: "reserved" }, { day: "23", status: "reserved" }, { day: "24", status: "reserved" },
             { day: "25", status: "available" }, { day: "26", status: "available" }, { day: "27", status: "available" },
             { day: "28", status: "available" }
           ],
