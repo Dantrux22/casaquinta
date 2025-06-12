@@ -63,7 +63,7 @@
     <div class="alojamiento">
      
         <ul class="descripcion">
-            <li><b>SALÓN</b>: 100m2 cerrado + Aire Acondicionado + TV + Ventilador industrial + Internet WiFi + Mesa, Sillas, vajilla bàsica (hasta 60) + esenario + 2 baños + 1 con ducha + pared espejada. Capacidad de sala 100 personas.</li>
+            <li><b>SALÓN</b>: 100m2 cerrado + Aire Acondicionado + TV + Ventilador industrial + Internet WiFi + Mesa, Sillas, vajilla bàsica (hasta 60) + escenario + 2 baños + 1 con ducha + pared espejada. Capacidad de sala 100 personas.</li>
             <li><b>PARQUE</b>: Parrilla + Fogonero + Pileta de 8x4 profundidad 1.00 a 2.00 mts2 baños + ducha interior y exterior + Patio Cervecero con sillas y mesas tipo carretes + reposeras + Solarium en deck de madera + sombrilla + Juego infantil con mangrullo hamacas, rueda colgante y tobogán para menores de 10 años.</li>
             <li><b>COCINA</b>: Heladera/Freezer + Horno pizzero + Pava eléctrica + Horno electrico + Microondas + Anafe eléctrico + utensillos de cocina.</li>
             <li><b>JUEGOS</b>: Sapo + Red de Vóley + pelota paleta + tejo de playa + juego de Ñinos</li>
@@ -115,29 +115,48 @@
 
     <!-- CALCULADORA -->
 
-    <h2 class="sub-titulos" id="precio">Precios</h2>
-    <p class="descripcion-p">Utiliza la calculadora para estimar tu presupuesto. Elige un rango horario. Reservas exclusivamente mendiante WhatsApp 1122554301</p>
-    <div class="calculadora">
-      <div id="horario-dia" class="conten-horario">
-        <label class="horario">
-          <input type="radio" id="horario-dia-1" name="horario-dia" value="6500" onclick="calcularTotal()">
-          10hs a 19hs
-        </label>
-        <label class="horario">
-          <input type="radio" id="horario-dia-2" name="horario-dia" value="10000" onclick="calcularTotal()">
-          21hs a 6am
-        </label>
-        <label>
-          <input type="tel" id="cantidad-personas-dia" placeholder="Cantidad de personas..." style="width: 200px;" pattern="[0-9]*">
-        </label>
-        <br>
-        <span id="mensaje-personas-dia" class="mensaje-error">Monto minimo de contratacion equivalente a 20 personas</span>
-        <span id="mensaje-personas-dia" class="mensaje-error2">Capacidad maxima del salon 100 personas </span>
-      </div>
-      <label>
-        <input type="text" id="TOTAL" placeholder="TOTAL" readonly style="width: 200px;">
+<form autocomplete="off">
+  <h2 class="sub-titulos" id="precio">Precios</h2>
+  <p class="descripcion-p">
+    Utiliza la calculadora para estimar tu presupuesto. Elige un rango horario.  
+    Reservas exclusivamente mediante WhatsApp 1122554301
+  </p>
+
+  <div class="calculadora">
+    <div id="horario-dia" class="conten-horario">
+      <label class="horario">
+        <input type="radio" name="horario-dia" value="7000">
+        10 hs a 19 hs
       </label>
+      <label class="horario">
+        <input type="radio" name="horario-dia" value="10000">
+        21 hs a 6 am
+      </label>
+      <label>
+        <input
+          type="tel"
+          id="cantidad-personas-dia"
+          placeholder="Cantidad de personas..."
+          style="width: 200px;"
+          pattern="[0-9]*"
+          autocomplete="off"
+          inputmode="numeric"
+        >
+      </label>
+      <br>
+      <span id="mensaje-personas-dia" class="mensaje-error" style="display:none;">
+        Monto mínimo de contratación equivalente a 20 personas
+      </span>
+      <span id="mensaje-personas-dia2" class="mensaje-error2" style="display:none;">
+        Capacidad máxima del salón 100 personas 
+      </span>
     </div>
+
+    <label>
+      <input type="text" id="TOTAL" placeholder="TOTAL" readonly style="width: 200px;">
+    </label>
+  </div>
+</form>
   
     <!-- CONDICION DE RESERVA-->
 <h2 class="sub-titulos" id="condiciones">Condiciones de la reserva</h2>
