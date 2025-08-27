@@ -1,50 +1,75 @@
-function calcularTotal() {
+// ================================
+// CALCULADORA DE PRECIOS (pro)
+// - Mínimo dinámico: 20 personas
+// - Máximo: 100 personas
+// - Formato ARS con Intl.NumberFormat
+// ================================
+(function () {
+  const radios = document.querySelectorAll('input[name="horario-dia"]');
   const inputP = document.getElementById('cantidad-personas-dia');
-  const personas = parseInt(inputP.value, 10);
-  const seleccionado = document.querySelector('input[name="horario-dia"]:checked');
-  const totalInput = document.getElementById('TOTAL');
+  const outTotal = document.getElementById('TOTAL');
   const msgMin = document.getElementById('mensaje-personas-dia');
   const msgMax = document.getElementById('mensaje-personas-dia2');
 
-  // Si no hay horario seleccionado o no es un número válido
-  if (!seleccionado || isNaN(personas) || personas <= 0) {
-    totalInput.value = '';
+  const MIN_PERSONAS = 20;
+  const MAX_PERSONAS = 100;
+  const fmtARS = new Intl.NumberFormat('es-AR', {
+    style: 'currency',
+    currency: 'ARS',
+    maximumFractionDigits: 0
+  });
+
+  function getPrecioUnitario() {
+    const sel = document.querySelector('input[name="horario-dia"]:checked');
+    return sel ? Number(sel.value) : 0;
+  }
+
+  function calcularTotal() {
+    // Sanitizar: solo números
+    if (inputP && inputP.value) {
+      inputP.value = inputP.value.replace(/\D+/g, '');
+    }
+
+    const personas = Number.parseInt(inputP?.value || '', 10);
+    const precioUnitario = getPrecioUnitario();
+
+    // Reset mensajes
     msgMin.style.display = 'none';
     msgMax.style.display = 'none';
-    return;
+
+    // Sin horario o sin personas válidas
+    if (!precioUnitario || !Number.isFinite(personas) || personas <= 0) {
+      outTotal.value = '';
+      return;
+    }
+
+    // Capacidad máxima
+    if (personas > MAX_PERSONAS) {
+      outTotal.value = '';
+      msgMax.style.display = 'block';
+      return;
+    }
+
+    // Mínimo dinámico
+    const minimo = MIN_PERSONAS * precioUnitario;
+    let total;
+    if (personas <= MIN_PERSONAS) {
+      total = minimo;
+      msgMin.style.display = 'block';
+    } else {
+      total = personas * precioUnitario;
+    }
+
+    outTotal.value = fmtARS.format(total);
   }
 
-  const precioUnitario = Number(seleccionado.value);
-  const minimo = precioUnitario * 20;
+  // Listeners
+  radios.forEach(r => r.addEventListener('change', calcularTotal));
+  if (inputP) inputP.addEventListener('input', calcularTotal);
 
-  // Capacidad máxima
-  if (personas > 100) {
-    totalInput.value = '';
-    msgMax.style.display = 'block';
-    msgMin.style.display = 'none';
-    return;
-  }
-  msgMax.style.display = 'none';
+  // Cálculo inicial
+  calcularTotal();
 
-  // Hasta 20 personas → mínimo dinámico
-  let total;
-  if (personas <= 20) {
-    total = minimo;
-    msgMin.style.display = 'block';
-  } else {
-    total = personas * precioUnitario;
-    msgMin.style.display = 'none';
-  }
-
-  // Muestro el total formateado
-  totalInput.value = '$' + total.toLocaleString('es-AR');
-}
-
-// Listeners para recalcular en vivo
-document.getElementById('cantidad-personas-dia')
-        .addEventListener('input', calcularTotal);
-document.querySelectorAll('input[name="horario-dia"]')
-        .forEach(radio => radio.addEventListener('change', calcularTotal));
-
-// Cálculo inicial en caso de que ya haya valor y opción marcada
-calcularTotal();
+  // Exponer por si se llama desde HTML
+  window.calcularTotal = calcularTotal;
+})();

@@ -1,134 +1,103 @@
-  /* CALCULADORA */
-html {
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-  .calculadora {
-    width: 80%;
-    margin: 10px auto;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgb(97, 90, 90);
-    outline: none;
-  }
-  .descripcion-p{
-    margin: 25px;
-    line-height: 1;
-  }
-  /* Contenedor del tipo de alquiler */
-  .conten-alquiler {
-    width: 100%;
-    padding: 10px;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    outline: none;
-    font-size: 16px;
-    text-align: center;
-    background: none;
-    color: black;
-    cursor: pointer;
-  }
-  
-  /* Inputs de cantidad y total */
-  .calculadora input[type="tel"], 
-  .calculadora input[type="text"], 
-  .calculadora input[type="time"] {
-    width: 100%;
-    padding: 12px;
-    margin: 10px 0;
-    text-align: center;
-    border-radius: 9px;
-    border: 2px solid #ccc;
-    outline: none;
-    font-size: 1.1rem;
-  }
-  
-  /* Botón calcular */
-  #calcular-personalizado {
-    padding: 12px 20px;
-    border: none;
-    border-radius: 8px;
-    background-color: #333;
-    color: #fff;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  #calcular-personalizado:hover {
-    background-color: #444;
-  }
-  
-  /* Mensaje de error */
-  .mensaje-error {
-    color: #ff0000;
-    font-size: 14px;
-    margin-top: 5px;
-    display: none;
-  }
-  
-  /* Mensaje de máximo horas */
-  #max-horas {
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 20px;
-  }
-  
-  /* Estilo responsivo */
-  @media (max-width: 768px) {
-    .calculadora {
-      width: 100%;
-      padding: 10px;
-      box-shadow: 0 0 10px rgb(119, 111, 111);
-    }
-    .calculadora input[type="tel"], 
-  .calculadora input[type="text"], 
-  .calculadora input[type="time"] {
-    width: 100%;
-    padding: 10px;
-    font-size: 1rem;
-  }
-}
-
-/* Checkbox personalizado */
-.calculadora input[type="radio"] {
-  position: relative;
-  appearance: none;
-  width: 20px;
-  height: 20px;
-  margin: 0 10px 0 0;
-  border-radius: 50%;
-  border: 2px solid #ccc;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-/* Checkbox (cuando está seleccionado) */
-.calculadora input[type="radio"]:checked {
-  background-color: #333;
-}
-
-/* Contenedor de horario */
-.conten-horario {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  border-radius: 8px;
-  padding: 20px;
-}
-
-/* Recuadro de horario */
-.horario {
-  display: flex;
-  width: 250px;
-  max-width: 500px;
-  margin: 20px auto;
-  padding: 10px;
+/* ===========================
+   CALCULADORA
+   =========================== */
+.calculadora {
+  width: min(900px, 100%);
+  margin: 16px auto 6px;
+  padding: 16px;
+  border-radius: var(--RAD);
+  background: var(--FONDO_CARDS);
+  border: 1px solid var(--BORDE);
+  box-shadow: var(--SOMBRA);
   text-align: center;
+}
+
+.conten-horario {
+  display: grid;
+  gap: 12px;
+  justify-items: center;
+  padding: 8px;
+}
+
+.horario {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
   justify-content: center;
-  border: 2px solid #ccc;
-  border-radius: 8px;
+  gap: 10px;
+  width: min(420px, 100%);
+  margin: 4px auto;
+  padding: 10px 12px;
+  border-radius: var(--RAD-SM);
+  border: 1px solid var(--BORDE);
+  background: #0f141c;
+  color: var(--TEXTO_PRINCIPAL);
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: border-color var(--TRANS), transform var(--TRANS);
+}
+.horario:hover { transform: translateY(-1px); border-color: var(--PRIMARIO) }
+
+/* Radios minimal */
+.calculadora input[type="radio"] {
+  appearance: none;
+  width: 18px; height: 18px;
+  border-radius: 999px;
+  border: 2px solid #3a4657;
+  background: transparent;
+  display: grid; place-items: center;
+  transition: border-color var(--TRANS), background var(--TRANS);
+}
+.calculadora input[type="radio"]:checked {
+  border-color: var(--PRIMARIO);
+  background: radial-gradient(8px 8px at 50% 50%, var(--PRIMARIO) 0 50%, transparent 51%);
+}
+
+/* Inputs */
+.calculadora input[type="tel"],
+.calculadora input[type="text"],
+.calculadora input[type="time"] {
+  width: min(420px, 100%);
+  padding: 12px 14px;
+  text-align: center;
+  border-radius: var(--RAD-SM);
+  border: 1px solid var(--BORDE);
+  background: #0f141c;
+  color: var(--TEXTO_PRINCIPAL);
+  font-size: 1rem;
+  outline: none;
+  transition: border-color var(--TRANS), box-shadow var(--TRANS);
+}
+.calculadora input::placeholder { color: #6b7280 }
+.calculadora input:focus {
+  border-color: var(--PRIMARIO);
+  box-shadow: 0 0 0 4px var(--PRIMARIO-ALFA);
+}
+
+/* Botón calcular (si lo usás) */
+#calcular-personalizado {
+  padding: 12px 18px;
+  border: 1px solid var(--BORDE);
+  border-radius: var(--RAD-SM);
+  background: linear-gradient(180deg, #0f141c 0%, var(--FONDO_CARDS) 100%);
+  color: var(--TEXTO_PRINCIPAL);
+  cursor: pointer;
+  transition: transform var(--TRANS), border-color var(--TRANS);
+}
+#calcular-personalizado:hover {
+  transform: translateY(-1px);
+  border-color: var(--PRIMARIO);
+}
+
+/* Mensajes */
+.mensaje-error,
+.mensaje-error2 {
+  display: none;
+  color: var(--ERROR);
+  font-size: .92rem;
+  margin-top: 6px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .calculadora { padding: 14px }
 }

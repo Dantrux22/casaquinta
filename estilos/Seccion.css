@@ -1,36 +1,52 @@
-html {
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; 
+/* ===========================
+   SECCIONES (alojamiento, normas, etc.)
+   =========================== */
+
+/* Sobre el alojamiento */
+.alojamiento { margin: 12px 0 6px }
+.descripcion { font-size: clamp(15px, 1.6vw, 17px) }
+
+/* Normas / Aptitudes */
+.normas-alojamiento {
+  margin: 8px auto 0;
+  max-width: 980px;
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(260px, 1fr) );
+  gap: 12px;
 }
-    section{
-        width: auto; 
-        max-width: 1200px; 
-        margin-left: auto; 
-        margin-right: auto; 
-      }
-    
-      @media (max-width: 1250px){
-        section{
-            max-width: 1000px; 
-        }
-      }
-       @media (max-width: 430px){
-        section{
-          max-width: 410px;
-        } 
-        nav {
-          display: flex;
-          margin: auto;
-          flex-wrap:wrap;
-        }
-        .nave-1{
-          display: inline;
-          padding: 8px;
-        }
-       } 
+.normas {
+  border: 1px solid var(--BORDE);
+  border-radius: var(--RAD);
+  background: var(--FONDO_CARDS);
+  padding: 14px;
+  color: var(--TEXTO_SECUNDARIO);
+  box-shadow: var(--SOMBRA);
+}
+.normas h5 {
+  margin: 0 0 10px;
+  font-weight: 800;
+  color: var(--TEXTO_PRINCIPAL);
+}
+.normas h5 i { color: var(--PRIMARIO) !important }
+.normas h5 .fa-xmark { color: var(--ERROR) !important; }
 
+.condicones { margin-left: 18px; font-size: 1rem }
 
+/* Listas de descargas */
+.lista-descargas {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0 0;
+}
+.lista-descargas li {
+  margin-bottom: 10px;
+  color: var(--TEXTO_SECUNDARIO);
+}
 
-
+/* Ajustes de títulos en móviles */
+@media (max-width: 375px) {
+  .titulo { font-size: 1.5rem !important }
+}
+@media (max-width: 320px) {
+  .titulo { font-size: 1.4rem !important }
+}

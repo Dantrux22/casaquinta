@@ -1,267 +1,261 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es-AR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <link rel="icon" href="https://yt3.googleusercontent.com/Ul9Oknzq5xsbCPH7HgF0pcJCtseoSK-ZExzGiBwKsJEiqMsJOLC4p9DiM5BMzNt66TZvmJcoTQ=s900-c-k-c0x00ffffff-no-rj">
-    <script src="https://kit.fontawesome.com/5e04496cb8.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="estilos/calculadora.css">
-    <link rel="stylesheet" href="estilos/calendario.css">
-    <link rel="stylesheet" href="estilos/estilo.css">
-    <link rel="stylesheet" href="estilos/navegador.css">
-    <link rel="stylesheet" href="estilos/Seccion.css">
-    <title>Multiespacio social eventos</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Multiespacio Social Eventos</title>
+
+  <link rel="icon" href="https://yt3.googleusercontent.com/Ul9Oknzq5xsbCPH7HgF0pcJCtseoSK-ZExzGiBwKsJEiqMsJOLC4p9DiM5BMzNt66TZvmJcoTQ=s900-c-k-c0x00ffffff-no-rj" />
+
+  <!-- Preconnect + FontAwesome (defer) -->
+  <link rel="preconnect" href="https://kit.fontawesome.com" crossorigin />
+  <script defer src="https://kit.fontawesome.com/5e04496cb8.js" crossorigin="anonymous"></script>
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="estilos/navegador.css" />
+  <link rel="stylesheet" href="estilos/estilo.css" />
+  <link rel="stylesheet" href="estilos/Seccion.css" />
+  <link rel="stylesheet" href="estilos/calculadora.css" />
+  <link rel="stylesheet" href="estilos/calendario.css" />
+
+  <!-- SEO local (opcional) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EventVenue",
+    "name": "Multiespacio Social Eventos",
+    "address": {
+      "@type":"PostalAddress",
+      "addressLocality":"Berazategui",
+      "addressRegion":"Buenos Aires",
+      "addressCountry":"AR"
+    },
+    "telephone": "+54 9 11 2255-4301",
+    "image": ["https://tusitio.com/fotos/foto10.jpeg"],
+    "url": "https://tusitio.com"
+  }
+  </script>
 </head>
 <body>
-    </div>
-    <section>
-<!-- NAVEGADOR         -->
 
-<header class="navegador">
+  <!-- NAVEGADOR -->
+  <header class="navegador">
     <div class="header-content">
-      <h1 class="titulo">Multiespacio social eventos</h1>
-      <button class="menu-toggle" id="menu-toggle">
-        <span>=</span>
-        <span style="display: none;">×</span>
+      <h1 class="titulo">Multiespacio Social Eventos</h1>
+      <button class="menu-toggle" id="menu-toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="Abrir menú">
+        <span class="burger" aria-hidden="true"></span>
       </button>
     </div>
-    <nav class="nave" id="nav-menu">
+    <nav class="nave" id="nav-menu" role="navigation" aria-label="Navegación principal">
       <a class="nave-1" href="#condiciones">Condiciones</a>
       <a class="nave-1" href="#precio">Precios</a>
       <a class="nave-1" href="#descarga">Normativa y Contrato</a>
-      <a class="nave-1" href="#ubicacion">Ubicacion</a>
-
+      <a class="nave-1" href="#ubicacion">Ubicación</a>
     </nav>
   </header>
 
-    </section>
-<!-- FOTOS -->
-<div class="fotos" role="gallery">
-    <div class="fotos-contenedor">
-      <div class="flecha-izquierda" id="flecha-izquierda"> &#10094; </div>
-      <div class="fotos-imagenes">
-        <img src="./fotos/foto10.jpeg" class="fotos-espacio">
-        <img src="./fotos/foto1.jpg" class="fotos-espacio">
-        <img src="./fotos/foto3.jpg" class="fotos-espacio">
-            <img src="./fotos/foto4.jpg" class="fotos-espacio">
-            <img src="./fotos/foto12.jpg" class="fotos-espacio">
-            <img src="./fotos/foto6.jpg" class="fotos-espacio">
-            <img src="./fotos/foto7.jpg" class="fotos-espacio">
-            <img src="./fotos/foto9.jpeg" class="fotos-espacio">
-            <img src="./fotos/foto2.jpeg" class="fotos-espacio">
+  <section>
+
+    <!-- FOTOS -->
+    <div class="fotos" role="region" aria-label="Galería del espacio">
+      <div class="fotos-contenedor">
+        <div class="flecha-izquierda" id="flecha-izquierda" aria-label="Anterior" role="button" tabindex="0">&#10094;</div>
+        <div class="fotos-imagenes" aria-live="polite">
+          <img src="./fotos/foto10.jpeg" class="fotos-espacio" loading="lazy" decoding="async" alt="Vista del salón de eventos" />
+          <img src="./fotos/foto1.jpg"   class="fotos-espacio" loading="lazy" decoding="async" alt="Sector del parque y pileta" />
+          <img src="./fotos/foto3.jpg"   class="fotos-espacio" loading="lazy" decoding="async" alt="Área de mesas en el salón" />
+          <img src="./fotos/foto4.jpg"   class="fotos-espacio" loading="lazy" decoding="async" alt="Detalle del escenario" />
+          <img src="./fotos/foto12.jpg"  class="fotos-espacio" loading="lazy" decoding="async" alt="Deck de madera con solarium" />
+          <img src="./fotos/foto6.jpg"   class="fotos-espacio" loading="lazy" decoding="async" alt="Parrilla y fogonero" />
+          <img src="./fotos/foto7.jpg"   class="fotos-espacio" loading="lazy" decoding="async" alt="Patio cervecero" />
+          <img src="./fotos/foto9.jpeg"  class="fotos-espacio" loading="lazy" decoding="async" alt="Juego infantil y parque" />
+          <img src="./fotos/foto2.jpeg"  class="fotos-espacio" loading="lazy" decoding="async" alt="Sanitarios y ducha" />
         </div>
-        <div class="flecha-derecha" id="flecha-derecha"> &#10095; </div>
+        <div class="flecha-derecha" id="flecha-derecha" aria-label="Siguiente" role="button" tabindex="0">&#10095;</div>
       </div>
     </div>
-        
-    <section>
-    <!-- ALOJAMIENTO -->
 
+    <!-- SOBRE NOSOTROS -->
     <h2 class="sub-titulos" id="alojamiento">Sobre Nosotros</h2>
-
     <div class="alojamiento">
-     
-        <ul class="descripcion">
-            <li><b>SALÓN</b>: 100m2 cerrado + Aire Acondicionado + TV + Ventilador industrial + Internet WiFi + Mesa, Sillas, vajilla bàsica (hasta 60) + escenario + 2 baños + 1 con ducha + pared espejada. Capacidad de sala 100 personas.</li>
-            <li><b>PARQUE</b>: Parrilla + Fogonero + Pileta de 8x4 profundidad 1.00 a 2.00 mts2 baños + ducha interior y exterior + Patio Cervecero con sillas y mesas tipo carretes + reposeras + Solarium en deck de madera + sombrilla + Juego infantil con mangrullo hamacas, rueda colgante y tobogán para menores de 10 años.</li>
-            <li><b>COCINA</b>: Heladera/Freezer + Horno pizzero + Pava eléctrica + Horno electrico + Microondas + Anafe eléctrico + utensillos de cocina.</li>
-            <li><b>JUEGOS</b>: Sapo + Red de Vóley + pelota paleta + tejo de playa + juego de Ñinos</li>
-            <li><b>ADCIONALES</b> Pool + metegol + tiro al blanco + Pin pong + sonido + luces + máquina de humo + proyector</li>
-
-        </ul>  
+      <ul class="descripcion">
+        <li><b>SALÓN</b>: 100m² cerrado · Aire Acondicionado · TV · Ventilador industrial · Internet WiFi · Mesas, sillas, vajilla básica (hasta 60) · escenario · 2 baños (1 con ducha) · pared espejada. Capacidad: 100 personas.</li>
+        <li><b>PARQUE</b>: Parrilla · Fogonero · Pileta 8x4 · 2 baños · duchas · Patio Cervecero · reposeras · solarium en deck · sombrilla · juegos infantiles.</li>
+        <li><b>COCINA</b>: Heladera/Freezer · Horno pizzero · Pava eléctrica · Horno eléctrico · Microondas · Anafe · utensilios.</li>
+        <li><b>JUEGOS</b>: Sapo · Vóley · Paleta · Tejo · juegos para niños.</li>
+        <li><b>ADICIONALES</b>: Pool · Metegol · Tiro al blanco · Ping pong · Sonido · Luces · Máquina de humo · Proyector.</li>
+      </ul>
     </div>
-       <!-- CALENDARIO -->
-    <h2 class="sub-titulos">Calendario dias disponibles</h2>
-    <P class="descripcion-p"> Consulta nuestras fechas disponibles (10hs-19hs y 21hs-06hs).  <b>Importante: la reserva no se puede realizar en esta página</b>. Verifica la disponibilidad y luego envíanos un mensaje por WhatsApp para reservar.
-    </P>
+
+    <!-- CALENDARIO -->
+    <h2 class="sub-titulos">Calendario días disponibles</h2>
+    <p class="descripcion-p">
+      Consultá nuestras fechas disponibles (10:00–19:00 y 21:00–06:00).
+      <b>Importante: la reserva no se realiza en esta página.</b>
+      Verificá la disponibilidad y luego escribinos por WhatsApp.
+    </p>
 
     <div class="calendar-container">
       <div class="navigation">
-        <button onclick="changeMonth(-1)"> &#10094;</button>
-        <h3 id="month-title">Noviembre</h3>
-        <button onclick="changeMonth(1)"> &#10095; </button>
+        <button type="button" onclick="changeMonth(-1)" aria-label="Mes anterior">&#10094;</button>
+        <h3 id="month-title">—</h3>
+        <button type="button" onclick="changeMonth(1)" aria-label="Mes siguiente">&#10095;</button>
       </div>
-      <!-- Botones para seleccionar el turno -->
-      <div class="shift-buttons">
-        <label>
-          <input type="checkbox" id="day-shift" checked onchange="changeShift('day')">
-          10:00 a 19:00
-        </label> 
-        <label>
-          <input type="checkbox" id="night-shift" onchange="changeShift('night')">
-          21:00 a 06:00
-        </label>
+
+      <div class="shift-buttons" aria-label="Seleccionar turno">
+        <label><input type="checkbox" id="day-shift" checked /> 10:00 a 19:00</label>
+        <label><input type="checkbox" id="night-shift" /> 21:00 a 06:00</label>
       </div>
-      <div id="calendar" class="calendar"></div>
-      <div class="legend">
-        <span class="available"> Disponible</span>
-        <span class="reserved"> No Disponible</span>
+
+      <div id="calendar" class="calendar" role="grid" aria-label="Calendario de disponibilidad"></div>
+
+      <div class="legend" aria-hidden="true">
+        <span class="available">Disponible</span>
+        <span class="reserved">No Disponible</span>
       </div>
     </div>
-<!-- SERVICIOS -->
-    <h2 class="sub-titulos" id="servicios">Servicios que ofrecemos:</h2>
+
+    <!-- SERVICIOS -->
+    <h2 class="sub-titulos" id="servicios">Servicios que ofrecemos</h2>
     <div class="caracteristicas">
-        <div class="sub-caracteristicas"><i class="fa-solid fa-house" style="color: #333;"></i> Salón</div>
-        <div class="sub-caracteristicas"><i class="fa-solid fa-person-swimming" style="color: #333;"></i> Pileta</div>
-        <div class="sub-caracteristicas"><i class="fa-solid fa-restroom" style="color: #333;"></i> Sanitarios</div>
-        <div class="sub-caracteristicas"><i class="fa-solid fa-tree" style="color: #333;"></i> Parque de juegos</div>
-        <div class="sub-caracteristicas"><i class="fa-solid fa-snowflake" style="color: #333;"></i> Aire acondicionado</div>
-        <div class="sub-caracteristicas"><i class="fa-solid fa-fire-burner" style="color: #333;"></i> Parrilla</div>
-        <div class="sub-caracteristicas"><i class="fa-solid fa-gamepad" style="color: #333;"></i> Juegos</div>
-        <div class="sub-caracteristicas"><i class="fa-solid fa-wifi" style="color: #333;"></i></i>Wifi</div>
-        <div class="sub-caracteristicas"><i class="fa-solid fa-bed" style="color: #333;"></i> Dormitorios</div>
+      <div class="sub-caracteristicas"><i class="fa-solid fa-house"></i> Salón</div>
+      <div class="sub-caracteristicas"><i class="fa-solid fa-person-swimming"></i> Pileta</div>
+      <div class="sub-caracteristicas"><i class="fa-solid fa-restroom"></i> Sanitarios</div>
+      <div class="sub-caracteristicas"><i class="fa-solid fa-tree"></i> Parque de juegos</div>
+      <div class="sub-caracteristicas"><i class="fa-solid fa-snowflake"></i> Aire acondicionado</div>
+      <div class="sub-caracteristicas"><i class="fa-solid fa-fire-burner"></i> Parrilla</div>
+      <div class="sub-caracteristicas"><i class="fa-solid fa-gamepad"></i> Juegos</div>
+      <div class="sub-caracteristicas"><i class="fa-solid fa-wifi"></i> Wifi</div>
+      <div class="sub-caracteristicas"><i class="fa-solid fa-bed"></i> Dormitorios</div>
     </div>
 
     <!-- CALCULADORA -->
+    <form autocomplete="off" onsubmit="return false">
+      <h2 class="sub-titulos" id="precio">Precios</h2>
+      <p class="descripcion-p">
+        Usá la calculadora para estimar tu presupuesto. Elegí un rango horario.
+        Reservas exclusivamente por WhatsApp <b>11 2255-4301</b>.
+      </p>
 
-<form autocomplete="off">
-  <h2 class="sub-titulos" id="precio">Precios</h2>
-  <p class="descripcion-p">
-    Utiliza la calculadora para estimar tu presupuesto. Elige un rango horario.  
-    Reservas exclusivamente mediante WhatsApp 1122554301
-  </p>
+      <div class="calculadora">
+        <div id="horario-dia" class="conten-horario">
+          <label class="horario"><input type="radio" name="horario-dia" value="9000" /> 10:00 a 19:00</label>
+          <label class="horario"><input type="radio" name="horario-dia" value="12500" /> 21:00 a 06:00</label>
+          <label>
+            <input type="tel" id="cantidad-personas-dia" placeholder="Cantidad de personas..." pattern="[0-9]*" inputmode="numeric" aria-describedby="mensaje-personas-dia mensaje-personas-dia2" />
+          </label>
+          <span id="mensaje-personas-dia" class="mensaje-error" style="display:none;">Monto mínimo de contratación equivalente a 20 personas</span>
+          <span id="mensaje-personas-dia2" class="mensaje-error2" style="display:none;">Capacidad máxima del salón 100 personas</span>
+        </div>
+        <label><input type="text" id="TOTAL" placeholder="TOTAL" readonly /></label>
+      </div>
+    </form>
 
-  <div class="calculadora">
-    <div id="horario-dia" class="conten-horario">
-      <label class="horario">
-        <input type="radio" name="horario-dia" value="7000">
-        10 hs a 19 hs
-      </label>
-      <label class="horario">
-        <input type="radio" name="horario-dia" value="10000">
-        21 hs a 6 am
-      </label>
-      <label>
-        <input
-          type="tel"
-          id="cantidad-personas-dia"
-          placeholder="Cantidad de personas..."
-          style="width: 200px;"
-          pattern="[0-9]*"
-          autocomplete="off"
-          inputmode="numeric"
-        >
-      </label>
-      <br>
-      <span id="mensaje-personas-dia" class="mensaje-error" style="display:none;">
-        Monto mínimo de contratación equivalente a 20 personas
-      </span>
-      <span id="mensaje-personas-dia2" class="mensaje-error2" style="display:none;">
-        Capacidad máxima del salón 100 personas 
-      </span>
-    </div>
-
-    <label>
-      <input type="text" id="TOTAL" placeholder="TOTAL" readonly style="width: 200px;">
-    </label>
-  </div>
-</form>
-  
-    <!-- CONDICION DE RESERVA-->
-<h2 class="sub-titulos" id="condiciones">Condiciones de la reserva</h2>
-
-<div class="normas-alojamiento">
-
-    <div class="normas">
-        <h5><b><i class="fa-regular fa-clipboard" style="color: #0f7204;"></i> Forma de reserva</b></h5>
-        <li>Para la reserva se obonar el %50 del alquiler y 10 dias antes debe abonarse el saldo restante</li>
-        <li>Leer y aceptar las Normas y condiciones del espacio</li>
-        <li>Se debe abonar como deposito y garantia de limpieza $40.000 que seran devueltos al finalizar el alquiler</li>        
-    </div>
-
-    <div class="normas">
-        <h5><i class="fa-solid fa-person" style="color: #0f7204;"></i> Apto</h5>
+    <!-- CONDICIONES -->
+    <h2 class="sub-titulos" id="condiciones">Condiciones de la reserva</h2>
+    <div class="normas-alojamiento">
+      <div class="normas">
+        <h5><b><i class="fa-regular fa-clipboard"></i> Forma de reserva</b></h5>
         <ul>
-            <li class="condicones">Bebés (0 a 2años)</li>
-            <li class="condicones">Niños (2 a 12 años)</li>
-            <li class="condicones">Personas con movilidad reducida</li>
+          <li>Se abona el 50% del alquiler y 10 días antes el saldo restante.</li>
+          <li>Leer y aceptar las normas y condiciones del espacio.</li>
+          <li>Depósito/garantía de limpieza $40.000 (reintegrable).</li>
         </ul>
+      </div>
+      <div class="normas">
+        <h5><i class="fa-solid fa-person"></i> Apto</h5>
+        <ul>
+          <li class="condicones">Bebés (0 a 2 años)</li>
+          <li class="condicones">Niños (2 a 12 años)</li>
+          <li class="condicones">Personas con movilidad reducida</li>
+        </ul>
+      </div>
+      <div class="normas">
+        <h5><i class="fa-solid fa-check"></i> Acepta</h5>
+        <ul>
+          <li class="condicones">Familias</li>
+          <li class="condicones">Parejas</li>
+          <li class="condicones">Grupo de jóvenes</li>
+        </ul>
+      </div>
+      <div class="normas">
+        <h5><i class="fa-solid fa-xmark" style="color:#ed1919;"></i> No acepta</h5>
+        <ul>
+          <li class="condicones">Fumar en el interior</li>
+          <li class="condicones">Música alta</li>
+          <li class="condicones">Mascotas</li>
+        </ul>
+      </div>
     </div>
 
-    <div class="normas">
-        <h5><i class="fa-solid fa-check" style="color: #0f7204;"></i> Acepta</h5>
-        <ul>
-            <li class="condicones">Familias</li>
-            <li class="condicones">Parejas</li>
-            <li class="condicones">Grupo de jóvenes</li>
-        </ul>
-    </div>
-
-    <div class="normas">
-        <h5><i class="fa-solid fa-x" style="color: #ed1919;"></i> No acepta</h5>
-        <ul>
-            <li class="condicones">Fumar en el interior</li>
-            <li class="condicones">Colocar música alta</li>
-            <li class="condicones">Mascotas</li>
-        </ul>
-    </div>
-</div>
- <!-- ADICIONALES     -->
-<div class="adicionales">
-    <h2 class="sub-titulos" id="condiciones">Adicionales</h2>
-    <ul class="lista-descargas">
-        <li class="archivos-des">Invitados adicionales $7.000</li>
+    <!-- ADICIONALES -->
+    <div class="adicionales">
+      <h2 class="sub-titulos" id="adicionales">Adicionales</h2>
+      <ul class="lista-descargas">
+        <li class="archivos-des">Invitados adicionales: $7.000</li>
         <li class="archivos-des">Parlantes c/u: $10.000</li>
         <li class="archivos-des">Máquina de humo: $10.000</li>
         <li class="archivos-des">Proyector: $10.000</li>
         <li class="archivos-des">Torres de luces (boliche): $30.000</li>
         <li class="archivos-des">Micrófonos c/u: $5.000</li>
         <li class="archivos-des">Pool + Metegol: $35.000</li>
-        <li class="archivos-des">pin pong + Metegol: $35.000</li>
+        <li class="archivos-des">Ping pong + Metegol: $35.000</li>
         <li class="archivos-des">Metegol: $17.000</li>
-    </ul>
-</div>
-<!-- MAPA -->
-<h2 class="sub-titulos" id="ubicacion">Ubicación</h2>
-<div class="link-mapa">
-    <p class="subtitulo"><i class="fa-solid fa-location-dot" style="color: #0d0d0d;"></i> Buenos Aires / Berazategui</p>
-    <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127674.18625098077!2d0!3d0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2d900790c36af%3A0x232a017f3b74705a!2sMultiespacio%20Social%20Eventos!5e0!3m2!1ses-419!2sar!4v1737376447470!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
-<!-- DESCARGAS -->
-        <div class="descargas" id="descarga">
-            <h2 class="sub-titulos"id="descargas">Normativa y Contrato del Alquiler</h2>
-            <ul class="lista-descargas">
-                <a class="archivos-des" href="Otros/CONTRATO DE LOCACION CASA DE EVENTOS (1).pdf" target="_blank" rel="noopener noreferrer">Modelo de contrato</a> <br> <br>
-                <a class="archivos-des" href="Otros/Normas y condiciones (1).pdf" target="_blank" rel="noopener noreferrer">Normas y condicones</a> <br> <br>
+      </ul>
+    </div>
 
-            </ul>
-        </div>
-    </section>
-        
-<!-- FOOTER     -->
-<footer>
+    <!-- UBICACIÓN -->
+    <h2 class="sub-titulos" id="ubicacion">Ubicación</h2>
+    <div class="link-mapa">
+      <p class="subtitulo"><i class="fa-solid fa-location-dot"></i> Buenos Aires / Berazategui</p>
+      <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d127674.18625098077!2d0!3d0!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95a2d900790c36af%3A0x232a017f3b74705a!2sMultiespacio%20Social%20Eventos!5e0!3m2!1ses-419!2sar!4v1737376447470!5m2!1ses-419!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa de ubicación"></iframe>
+    </div>
+
+    <!-- DESCARGAS -->
+    <div class="descargas" id="descarga">
+      <h2 class="sub-titulos" id="descarga-titulo">Normativa y Contrato del Alquiler</h2>
+      <ul class="lista-descargas">
+        <li><a class="archivos-des" href="Otros/CONTRATO DE LOCACION CASA DE EVENTOS (1).pdf" target="_blank" rel="noopener noreferrer">Modelo de contrato</a></li>
+        <li><a class="archivos-des" href="Otros/Normas y condiciones (1).pdf" target="_blank" rel="noopener noreferrer">Normas y condiciones</a></li>
+      </ul>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
     <div class="contenido-footer">
-        <div class="enlaces-rapidos">
-            <h3>Enlaces Rápidos</h3>
-            <ul>
-                <li><a href="#alojamiento">Alojamiento</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#ubicacion">Ubicación</a></li>
-                <li><a href="#condiciones">Condiciones</a></li>
-                <li><a href="#precio">Precios</a></li>
-                <li><a href="#descarga">Descarga</a></li>
-            </ul>
-        </div>
-        <div class="informacion-contacto">
-            <h3>Contacto</h3>
-            <p>Dirección: Buenos Aires / Berazategui</p>
-            <p>Teléfono: +54 9 11 2255-4301</p>
-        </div>
+      <div class="enlaces-rapidos">
+        <h3>Enlaces Rápidos</h3>
+        <ul>
+          <li><a href="#alojamiento">Alojamiento</a></li>
+          <li><a href="#servicios">Servicios</a></li>
+          <li><a href="#ubicacion">Ubicación</a></li>
+          <li><a href="#condiciones">Condiciones</a></li>
+          <li><a href="#precio">Precios</a></li>
+          <li><a href="#descarga">Descarga</a></li>
+        </ul>
+      </div>
+      <div class="informacion-contacto">
+        <h3>Contacto</h3>
+        <p>Dirección: Buenos Aires / Berazategui</p>
+        <p>Teléfono: <a href="tel:+5491122554301">+54 9 11 2255-4301</a></p>
+      </div>
     </div>
     <div class="derechos-reservados">
-        <p>&copy; 2025 Multiespacio Social. Todos los derechos reservados.</p>
+      <p>&copy; 2025 Multiespacio Social. Todos los derechos reservados.</p>
     </div>
-</footer>
-<a href="https://wa.me/+5491122554301" target="_blank" class="whatsapp-button">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="50" height="50">
-</a>
+  </footer>
 
+  <!-- WhatsApp FAB -->
+  <a href="https://wa.me/5491122554301" target="_blank" class="whatsapp-button" aria-label="Chatear por WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="" width="50" height="50" />
+  </a>
 
-  <!-- script -->
-   <script src="scrips/calculadora.js"></script>
-   <script src="scrips/calendario.js"></script>
-   <script src="scrips/nav.js"></script>
-
+  <!-- Scripts (orden importante) -->
+  <script defer src="scrips/availability-csv.js"></script>
+  <script defer src="scrips/calendario.js"></script>
+  <script defer src="scrips/nav.js"></script>
+  <script defer src="scrips/calculadora.js"></script>
 </body>
 </html>
-

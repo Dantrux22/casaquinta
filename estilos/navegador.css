@@ -1,115 +1,157 @@
-/* General styles */
-body {
-   font-family: Arial, sans-serif;
-   margin: 0;
-   padding: 0;
-   box-sizing: border-box;
-}
-html {
-   -webkit-background-size: cover;
-   -moz-background-size: cover;
-   -o-background-size: cover;
-   background-size: cover; 
-}
+/* ===========================
+   NAVEGADOR / HEADER (responsive drop-down)
+   =========================== */
+:root { --header-h: 64px; }
 
 .navegador {
-   display: flex;
-   flex-direction: column;
-   margin: 0 auto;
-   align-items: center;
-   width: 100%;
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  border-bottom: 1px solid var(--BORDE);
+  background: rgba(10, 13, 18, .75);
+  backdrop-filter: saturate(120%) blur(6px);
 }
 
 .header-content {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   width: 100%;
-   position: relative;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: 12px clamp(16px, 4vw, 28px);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 12px;
+  min-height: var(--header-h);
 }
 
 .titulo {
-   text-align: center;
-   font-size: 2.5rem;
-   margin: 25px 0;
-   flex: 1;
+  margin: 0;
+  font-weight: 800;
+  letter-spacing: 0.3px;
+  background: linear-gradient(90deg, var(--TEXTO_PRINCIPAL), #cde8ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  font-size: clamp(22px, 3.2vw, 34px);
 }
 
+/* --- Toggle (hamburguesa) --- */
 .menu-toggle {
-   display: none;
-   font-size: 2rem;
-   background: none;
-   border: none;
-   cursor: pointer;
-   position: absolute;
-   right: 20px;
-   color: #333;
-   z-index: 1000;
+  display: none; /* solo en mobile */
+  appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  background: var(--FONDO_CARDS);
+  border: 1px solid var(--BORDE);
+  color: var(--TEXTO_PRINCIPAL);
+  border-radius: 10px;
+  width: 44px; height: 44px;
+  cursor: pointer;
+  transition: transform var(--TRANS), border-color var(--TRANS), background var(--TRANS);
+  position: relative;
+  z-index: 5;
 }
+.menu-toggle:hover { transform: scale(1.04); border-color: var(--PRIMARIO) }
+.menu-toggle:focus-visible { outline: 2px solid var(--FOCUS); outline-offset: 2px }
 
+/* Icono hamburguesa animado -> X */
+.menu-toggle .burger,
+.menu-toggle .burger::before,
+.menu-toggle .burger::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 22px; height: 2px;
+  background: var(--TEXTO_PRINCIPAL);
+  transform: translateX(-50%);
+  transition: transform var(--TRANS), opacity var(--TRANS), top var(--TRANS), bottom var(--TRANS);
+  border-radius: 2px;
+}
+.menu-toggle .burger { top: 50%; transform: translate(-50%, -50%) }
+.menu-toggle .burger::before { top: -7px }
+.menu-toggle .burger::after  { bottom: -7px }
+.menu-toggle[aria-expanded="true"] .burger { transform: translate(-50%, -50%) rotate(45deg) }
+.menu-toggle[aria-expanded="true"] .burger::before { top: 0; transform: translateX(-50%) rotate(90deg) }
+.menu-toggle[aria-expanded="true"] .burger::after  { bottom: 0; transform: translateX(-50%) rotate(90deg) }
 
-/* Navigation styles */
+/* --- Nav (desktop) --- */
 .nave {
-   display: flex;
-   justify-content: space-evenly;
-   margin-bottom: 30px;
-   transition: opacity 0.5s ease-in-out;
+  max-width: 1200px;
+  margin: 0 auto 12px;
+  padding-inline: clamp(16px, 4vw, 28px);
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .nave-1 {
-   color: #000;
-   font-size: 1rem;
-   margin: 0 1rem;
-   text-decoration: none;
+  text-decoration: none;
+  color: var(--TEXTO_PRINCIPAL);
+  background: var(--FONDO_CARDS);
+  border: 1px solid var(--BORDE);
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-size: 15px;
+  transition: border-color var(--TRANS), color var(--TRANS), background var(--TRANS), transform var(--TRANS);
+}
+.nave-1:hover {
+  border-color: var(--PRIMARIO);
+  color: var(--PRIMARIO);
+  transform: translateY(-1px);
+  background: #0f141c;
 }
 
-/* Responsive styles */
+/* Link activo */
+.nave-1[aria-current="page"],
+.nave-1.active {
+  border-color: var(--PRIMARIO);
+  color: var(--PRIMARIO);
+}
+
+/* ========== MOBILE (drop-down bajo el header) ========== */
 @media (max-width: 768px) {
-   section{
-      margin-top: 67px;
-   }
-   .titulo{
-      text-align: start;
-      font-size: 1.6rem;
-      margin: 20px 20px;
-   }
-   .nave {
-       display: none;
-       flex-direction: column;
-       width: 100%;
-       text-align: center;
-       position: fixed;
-       top: 0;
-       left: 0;
-       height: 100vh;
-       justify-content: center;
-       align-items: center;
-       z-index: 1;
-       padding-top: 60px; 
-   }
+  .header-content {
+    position: sticky; top: 0; z-index: 20;
+    padding-block: 10px;
+    min-height: var(--header-h);
+  }
 
-   .menu-toggle {
-       display: block;
-   }
+  .menu-toggle { display: inline-block }
 
-   .nave-1 {
-       margin: 20px 0; 
-       font-size: 1.5rem;
-       background-color: #fff;
+  /* Nav colapsado por altura */
+  header.navegador .nave {
+    position: static;
+    width: 100%;
+    margin: 0;
+    padding: 0 clamp(16px, 4vw, 28px);
+    background: rgba(10,13,18,.95);
+    border-bottom: 1px solid var(--BORDE);
 
-   }
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-6px);
+    transition:
+      max-height 280ms ease,
+      opacity 220ms ease,
+      transform 220ms ease,
+      padding-top 220ms ease,
+      padding-bottom 220ms ease;
+  }
 
-   .nave.show {
-       display: flex;
-       background-color: #fff;
-       opacity: 1;
-   }
+  header.navegador .nave.show {
+    max-height: 80vh;
+    opacity: 1;
+    transform: none;
+    padding-top: 12px;
+    padding-bottom: 16px;
+  }
 
-   .header-content {
-       position: fixed;
-       top: -2px;
-       width: 100%;
-       z-index: 2;
-       border-radius: 0 0 7px 7px;
-   }
+  header.navegador .nave-1 {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    margin: 8px 0;
+  }
 }
