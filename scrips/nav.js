@@ -62,44 +62,6 @@
       targets.forEach(t => io.observe(t));
     }
 
-    // ---------- Galería ----------
-    const left = document.getElementById('flecha-izquierda');
-    const right = document.getElementById('flecha-derecha');
-    const strip = document.querySelector('.fotos-imagenes');
-
-    if (strip) {
-      strip.setAttribute('tabindex', '0');
-
-      function step() { return Math.max(240, Math.floor(strip.clientWidth * 0.85)); }
-      function canScrollLeft() { return strip.scrollLeft > 0; }
-      function canScrollRight() { return strip.scrollLeft + strip.clientWidth < strip.scrollWidth - 1; }
-      function updateArrows() {
-        if (left) left.style.opacity = canScrollLeft() ? '1' : '0.45';
-        if (right) right.style.opacity = canScrollRight() ? '1' : '0.45';
-      }
-      function scrollByDir(dir) {
-        strip.scrollBy({ left: dir * step(), top: 0, behavior: 'smooth' });
-        setTimeout(updateArrows, 300);
-      }
-
-      left?.addEventListener('click', () => scrollByDir(-1));
-      right?.addEventListener('click', () => scrollByDir(1));
-      strip.addEventListener('scroll', updateArrows);
-
-      strip.addEventListener('keydown', (e) => {
-        if (e.key === 'ArrowLeft') { e.preventDefault(); scrollByDir(-1); }
-        if (e.key === 'ArrowRight') { e.preventDefault(); scrollByDir(1); }
-      });
-
-      strip.addEventListener('wheel', (e) => {
-        if (Math.abs(e.deltaY) > Math.abs(e.deltaX)) {
-          e.preventDefault();
-          strip.scrollLeft += e.deltaY;
-          updateArrows();
-        }
-      }, { passive: false });
-
       updateArrows();
-    }
   });
 })();

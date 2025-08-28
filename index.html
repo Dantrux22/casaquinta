@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="estilos/Seccion.css" />
   <link rel="stylesheet" href="estilos/calculadora.css" />
   <link rel="stylesheet" href="estilos/calendario.css" />
+  <link rel="stylesheet" href="estilos/galeria.css">
 
   <!-- SEO local (opcional) -->
   <script type="application/ld+json">
@@ -57,23 +58,51 @@
   <section>
 
     <!-- FOTOS -->
-    <div class="fotos" role="region" aria-label="Galería del espacio">
-      <div class="fotos-contenedor">
-        <div class="flecha-izquierda" id="flecha-izquierda" aria-label="Anterior" role="button" tabindex="0">&#10094;</div>
-        <div class="fotos-imagenes" aria-live="polite">
-          <img src="./fotos/foto10.jpeg" class="fotos-espacio" loading="lazy" decoding="async" alt="Vista del salón de eventos" />
-          <img src="./fotos/foto1.jpg"   class="fotos-espacio" loading="lazy" decoding="async" alt="Sector del parque y pileta" />
-          <img src="./fotos/foto3.jpg"   class="fotos-espacio" loading="lazy" decoding="async" alt="Área de mesas en el salón" />
-          <img src="./fotos/foto4.jpg"   class="fotos-espacio" loading="lazy" decoding="async" alt="Detalle del escenario" />
-          <img src="./fotos/foto12.jpg"  class="fotos-espacio" loading="lazy" decoding="async" alt="Deck de madera con solarium" />
-          <img src="./fotos/foto6.jpg"   class="fotos-espacio" loading="lazy" decoding="async" alt="Parrilla y fogonero" />
-          <img src="./fotos/foto7.jpg"   class="fotos-espacio" loading="lazy" decoding="async" alt="Patio cervecero" />
-          <img src="./fotos/foto9.jpeg"  class="fotos-espacio" loading="lazy" decoding="async" alt="Juego infantil y parque" />
-          <img src="./fotos/foto2.jpeg"  class="fotos-espacio" loading="lazy" decoding="async" alt="Sanitarios y ducha" />
-        </div>
-        <div class="flecha-derecha" id="flecha-derecha" aria-label="Siguiente" role="button" tabindex="0">&#10095;</div>
+<!-- GALERÍA -->
+<section id="galeria"
+  data-fotos='[
+    "./fotos/foto10.jpeg",
+    "./fotos/foto1.jpg",
+    "./fotos/foto3.jpg",
+    "./fotos/foto4.jpg",
+    "./fotos/foto12.jpg",
+    "./fotos/foto6.jpg",
+    "./fotos/foto7.jpg",
+    "./fotos/foto9.jpeg",
+    "./fotos/foto2.jpeg"
+  ]'
+  data-videos='[]'>
+
+  <div class="galeria-hero">
+    <div class="gal-hero-grid">
+
+      <!-- 1 grande a la izquierda -->
+      <button class="gal-item gal-main" data-idx="0" aria-label="Abrir galería (foto 1)">
+        <img src="./fotos/foto10.jpeg" alt="Vista del salón de eventos">
+      </button>
+
+      <!-- 1 grande arriba a la derecha -->
+      <button class="gal-item gal-right-top" data-idx="1" aria-label="Abrir galería (foto 2)">
+        <img src="./fotos/foto1.jpg" alt="Parque y atardecer">
+      </button>
+
+      <!-- 2 chicas debajo (mismo alto total que la grande de la izq.) -->
+      <div class="gal-right-bottom">
+        <button class="gal-item" data-idx="2" aria-label="Abrir galería (foto 3)">
+          <img src="./fotos/foto3.jpg" alt="Área de mesas">
+        </button>
+
+        <!-- botón “Ver galería” -->
+        <button class="gal-item gal-more" data-idx="0" aria-label="Ver galería completa">
+          <img src="./fotos/foto4.jpg" alt="Escenario">
+          <span class="gal-more-badge">📷 Ver galería</span>
+        </button>
       </div>
+
     </div>
+  </div>
+</section>
+
 
     <!-- SOBRE NOSOTROS -->
     <h2 class="sub-titulos" id="alojamiento">Sobre Nosotros</h2>
@@ -258,5 +287,7 @@
   <script defer src="scrips/calendario.js"></script>
   <script defer src="scrips/nav.js"></script>
   <script defer src="scrips/calculadora.js"></script>
+  <script defer src="scrips/galeria-min.js"></script>
+
 </body>
 </html>
